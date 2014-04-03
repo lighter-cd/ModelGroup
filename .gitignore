@@ -1,0 +1,4 @@
+$ cat .gitignore
+*.zip
+*.7z
+*.rar

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LitJson", "LitJson\LitJson.csproj", "{256B1F9F-3729-4B4B-8D23-14FF12F57F4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelGroup", "ModelGroup\ModelGroup.csproj", "{8940131B-3BBE-4520-A36A-D5F21DF38CCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelGroupTest", "ModelGroupTest\ModelGroupTest.csproj", "{7F93C828-9C97-4CAF-B94A-3C5650EB0B23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{256B1F9F-3729-4B4B-8D23-14FF12F57F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256B1F9F-3729-4B4B-8D23-14FF12F57F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256B1F9F-3729-4B4B-8D23-14FF12F57F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256B1F9F-3729-4B4B-8D23-14FF12F57F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8940131B-3BBE-4520-A36A-D5F21DF38CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8940131B-3BBE-4520-A36A-D5F21DF38CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8940131B-3BBE-4520-A36A-D5F21DF38CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8940131B-3BBE-4520-A36A-D5F21DF38CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F93C828-9C97-4CAF-B94A-3C5650EB0B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F93C828-9C97-4CAF-B94A-3C5650EB0B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F93C828-9C97-4CAF-B94A-3C5650EB0B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F93C828-9C97-4CAF-B94A-3C5650EB0B23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

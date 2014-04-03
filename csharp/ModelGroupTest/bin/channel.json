@@ -1,0 +1,817 @@
+[
+	{
+		"name": "玩家",
+		"alias": "player",
+		"castshadow": 1,
+		"global_params": {
+			"param": [
+				{
+					"name": "职业"
+				}, {
+					"name": "性别"
+				}
+			]
+		},
+		"channels": {
+			"channel": [
+				{
+					"name": "裸体",
+					"alias": "body",
+					"target": "",
+					"type": -1,
+					"attach_to": -1,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "裸体"
+						}
+					]
+				}, {
+					"name": "脑袋",
+					"alias": "head",
+					"target": "裸体",
+					"type": 1,
+					"attach_to": "Dummy头部对位",
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "脑袋"
+						}
+					]
+				}, {
+					"name": "头发",
+					"alias": "hair",
+					"target": "裸体",
+					"type": 2,
+					"attach_to": 1,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "头发"
+						}
+					]
+				}, {
+					"name": "头盔",
+					"alias": "",
+					"target": "裸体",
+					"type": 2,
+					"attach_to": 2,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"hidden": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "防具",
+							"filter": "防具部位",
+							"value": 1
+						}
+					]
+				}, {
+					"name": "护肩",
+					"alias": "",
+					"target": "裸体",
+					"type": 2,
+					"attach_to": 3,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"hidden": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "防具",
+							"filter": "防具部位",
+							"value": 2
+						}
+					]
+				}, {
+					"name": "衣服",
+					"alias": "",
+					"target": "裸体",
+					"type": 2,
+					"attach_to": 4,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"hidden": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "防具",
+							"filter": "防具部位",
+							"value": 3
+						}
+					]
+				}, {
+					"name": "裤子",
+					"alias": "",
+					"target": "裸体",
+					"type": 2,
+					"attach_to": 5,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"hidden": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "防具",
+							"filter": "防具部位",
+							"value": 4
+						}
+					]
+				}, {
+					"name": "腰带",
+					"alias": "",
+					"target": "裸体",
+					"type": 2,
+					"attach_to": 6,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"hidden": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "防具",
+							"filter": "防具部位",
+							"value": 5
+						}
+					]
+				}, {
+					"name": "手套",
+					"alias": "",
+					"target": "裸体",
+					"type": 2,
+					"attach_to": 7,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"hidden": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "防具",
+							"filter": "防具部位",
+							"value": 6
+						}
+					]
+				}, {
+					"name": "手腕",
+					"alias": "",
+					"target": "裸体",
+					"type": 2,
+					"attach_to": 8,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"hidden": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "防具",
+							"filter": "防具部位",
+							"value": 7
+						}
+					]
+				}, {
+					"name": "鞋子",
+					"alias": "",
+					"target": "裸体",
+					"type": 2,
+					"attach_to": 9,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"hidden": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "防具",
+							"filter": "防具部位",
+							"value": 8
+						}
+					]
+				}, {
+					"name": "披风",
+					"alias": "",
+					"target": "裸体",
+					"type": 2,
+					"attach_to": 10,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"hidden": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "防具",
+							"filter": "防具部位",
+							"value": 9
+						}
+					]
+				}, {
+					"name": "武器",
+					"alias": "",
+					"target": "裸体",
+					"type": 6,
+					"attach_to": "01",
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"asyncLoad": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "武器"
+						}
+					]
+				}, {
+					"name": "法宝",
+					"alias": "",
+					"target": "裸体",
+					"type": 6,
+					"attach_to": "02",
+					"asyncLoad": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "法宝"
+						}
+					]
+				}, {
+					"name": "动作",
+					"alias": "",
+					"target": "裸体",
+					"type": 3,
+					"attach_to": 0,
+					"sound": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "空手动作"
+						}, {
+							"group": "玩家",
+							"enum": "武器动作"
+						}, {
+							"group": "玩家",
+							"enum": "通用动作"
+						}, {
+							"group": "玩家",
+							"enum": "技能施放动作"
+						}, {
+							"group": "玩家",
+							"enum": "表情动作"
+						}, {
+							"group": "玩家",
+							"enum": "选人动作"
+						}, {
+							"group": "玩家",
+							"enum": "技能吟唱动作"
+						}, {
+							"group": "玩家",
+							"enum": "法宝动作"
+						}
+					]
+				}, {
+					"name": "动作特效1",
+					"alias": "",
+					"target": "裸体",
+					"type": 6,
+					"attach_to": "03",
+					"sound": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "空手特效"
+						}, {
+							"group": "玩家",
+							"enum": "武器特效"
+						}, {
+							"group": "玩家",
+							"enum": "通用特效"
+						}, {
+							"group": "玩家",
+							"enum": "选人特效"
+						}, {
+							"group": "玩家",
+							"enum": "表情特效"
+						}, {
+							"group": "玩家",
+							"enum": "法宝特效"
+						}
+					]
+				}, {
+					"name": "动作特效2",
+					"alias": "",
+					"target": "裸体",
+					"type": 6,
+					"attach_to": "04",
+					"sound": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "技能施放特效"
+						}, {
+							"group": "玩家",
+							"enum": "技能吟唱特效"
+						}
+					]
+				}, {
+					"name": "被击特效",
+					"alias": "",
+					"target": "裸体",
+					"type": 6,
+					"attach_to": "08",
+					"dims": 32,
+					"sound": 1,
+					"asyncLoad": 1,
+					"source": [
+						{
+							"group": "技能",
+							"enum": "效果",
+							"filter": "技能阶段",
+							"value": 4
+						}, {
+							"group": "技能",
+							"enum": "效果",
+							"filter": "技能阶段",
+							"value": 11
+						}
+					]
+				}, {
+					"name": "技能BUF",
+					"alias": "",
+					"target": "裸体",
+					"type": 6,
+					"attach_to": 40,
+					"dims": 32,
+					"sound": 1,
+					"asyncLoad": 1,
+					"source": [
+						{
+							"group": "技能",
+							"enum": "效果",
+							"filter": "技能阶段",
+							"value": 6
+						}, {
+							"group": "技能",
+							"enum": "效果",
+							"filter": "技能阶段",
+							"value": 9
+						}
+					]
+				}, {
+					"name": "摄像机",
+					"alias": "",
+					"target": "裸体",
+					"type": 0,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "摄像机"
+						}
+					]
+				}, {
+					"name": "夜晚灯光",
+					"alias": "",
+					"target": "裸体",
+					"type": 0,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "灯光"
+						}
+					]
+				}, {
+					"name": "通用特效",
+					"alias": "",
+					"target": "裸体",
+					"type": 6,
+					"attach_to": 72,
+					"dims": 8,
+					"source": [
+						{
+							"group": "通用特效",
+							"enum": "角色通用"
+						}
+					]
+				}, {
+					"name": "阴影",
+					"alias": "shadow",
+					"target": "裸体",
+					"type": 1,
+					"attach_to": "Bip01",
+					"dims": 1,
+					"bbox": 0,
+					"shadowdecal": 1,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "阴影"
+						}
+					]
+				}, {
+					"name": "时装",
+					"alias": "",
+					"target": "裸体",
+					"type": 2,
+					"attach_to": 11,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"hidden": 2,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "时装"
+						}
+					]
+				}, {
+					"name": "装备特效",
+					"alias": "",
+					"target": "裸体",
+					"type": 6,
+					"attach_to": "Bip01",
+					"dims": 8,
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "装备特效"
+						}
+					]
+				}
+			]
+		},
+		"textures": {
+			"channel": {
+				"name": "脑袋",
+				"alias": "header_texture",
+				"target": "脑袋",
+				"type": -1,
+				"attach_to": "脑袋",
+				"source": {
+					"group": "玩家",
+					"enum": "脑袋贴图"
+				}
+			}
+		},
+		"colors": {
+			"color": {
+				"name": "法宝颜色",
+				"alias": "talisman_texture",
+				"target": {
+					"channel": "法宝",
+					"element": ""
+				}
+			}
+		}
+	}, {
+		"name": "NPC",
+		"alias": "NPC",
+		"castshadow": 1,
+		"global_params": {
+			"param": {
+				"name": "NPC"
+			}
+		},
+		"channels": {
+			"channel": [
+				{
+					"name": "模型",
+					"alias": "model",
+					"target": "",
+					"type": -1,
+					"attach_to": -1,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"source": {
+						"group": "NPC",
+						"enum": "模型"
+					}
+				}, {
+					"name": "动作",
+					"alias": "",
+					"target": "模型",
+					"type": 3,
+					"attach_to": 0,
+					"sound": 1,
+					"source": [
+						{
+							"group": "NPC",
+							"enum": "普通动作"
+						}, {
+							"group": "NPC",
+							"enum": "技能动作"
+						}
+					]
+				}, {
+					"name": "动作特效",
+					"alias": "",
+					"target": "模型",
+					"type": 6,
+					"attach_to": "01",
+					"sound": 1,
+					"source": {
+						"group": "NPC",
+						"enum": "动作特效"
+					}
+				}, {
+					"name": "技能特效",
+					"alias": "",
+					"target": "模型",
+					"type": 6,
+					"attach_to": "02",
+					"sound": 1,
+					"source": {
+						"group": "NPC",
+						"enum": "技能特效"
+					}
+				}, {
+					"name": "被击特效",
+					"alias": "",
+					"target": "模型",
+					"type": 6,
+					"attach_to": "08",
+					"dims": 32,
+					"sound": 1,
+					"source": [
+						{
+							"group": "技能",
+							"enum": "效果",
+							"filter": "技能阶段",
+							"value": 4
+						}, {
+							"group": "技能",
+							"enum": "效果",
+							"filter": "技能阶段",
+							"value": 11
+						}
+					]
+				}, {
+					"name": "技能BUF",
+					"alias": "",
+					"target": "模型",
+					"type": 6,
+					"attach_to": 40,
+					"dims": 32,
+					"sound": 1,
+					"source": [
+						{
+							"group": "技能",
+							"enum": "效果",
+							"filter": "技能阶段",
+							"value": 6
+						}, {
+							"group": "技能",
+							"enum": "效果",
+							"filter": "技能阶段",
+							"value": 9
+						}
+					]
+				}, {
+					"name": "任务标记",
+					"alias": "",
+					"target": "模型",
+					"type": 1,
+					"attach_to": "任务Dummy",
+					"source": {
+						"group": "NPC",
+						"enum": "任务标记"
+					}
+				}, {
+					"name": "通用特效",
+					"alias": "",
+					"target": "模型",
+					"type": 6,
+					"attach_to": 72,
+					"dims": 8,
+					"source": {
+						"group": "通用特效",
+						"enum": "角色通用"
+					}
+				}, {
+					"name": "阴影",
+					"alias": "shadow",
+					"target": "模型",
+					"type": 1,
+					"attach_to": "Bip01",
+					"dims": 1,
+					"bbox": 0,
+					"shadowdecal": 1,
+					"source": {
+						"group": "NPC",
+						"enum": "阴影"
+					}
+				}, {
+					"name": "范围",
+					"alias": "range",
+					"target": "模型",
+					"type": 0,
+					"dims": 1,
+					"bbox": 0,
+					"source": {
+						"group": "NPC",
+						"enum": "范围"
+					}
+				}
+			]
+		},
+		"textures": {
+			"channel": {
+				"name": "NPC贴图",
+				"alias": "texture",
+				"target": "模型",
+				"type": -1,
+				"attach_to": "模型",
+				"source": {
+					"group": "NPC",
+					"enum": "NPC贴图"
+				}
+			}
+		}
+	}, {
+		"name": "技能效果",
+		"alias": "effect",
+		"global_params": {
+			"param": {
+				"name": "技能"
+			}
+		},
+		"channels": {
+			"channel": {
+				"name": "效果",
+				"alias": "eff",
+				"target": "",
+				"type": -1,
+				"attach_to": -1,
+				"sound": 1,
+				"bbox": 1,
+				"source": {
+					"group": "技能",
+					"enum": "效果"
+				}
+			}
+		}
+	}, {
+		"name": "坐骑",
+		"alias": "zuoji",
+		"castshadow": 1,
+		"global_params": {
+			"param": {
+				"name": "坐骑"
+			}
+		},
+		"channels": {
+			"channel": [
+				{
+					"name": "模型",
+					"alias": "model",
+					"target": "",
+					"type": -1,
+					"attach_to": -1,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"source": {
+						"group": "坐骑",
+						"enum": "模型"
+					}
+				}, {
+					"name": "动作",
+					"alias": "",
+					"target": "模型",
+					"type": 3,
+					"attach_to": 0,
+					"sound": 1,
+					"source": {
+						"group": "坐骑",
+						"enum": "普通动作"
+					}
+				}, {
+					"name": "动作特效",
+					"alias": "",
+					"target": "模型",
+					"type": 6,
+					"attach_to": "01",
+					"sound": 1,
+					"source": {
+						"group": "坐骑",
+						"enum": "动作特效"
+					}
+				}
+			]
+		},
+		"textures": {
+			"channel": {
+				"name": "坐骑贴图",
+				"alias": "texture",
+				"target": "模型",
+				"type": -1,
+				"attach_to": "",
+				"source": {
+					"group": "坐骑",
+					"enum": "坐骑贴图"
+				}
+			}
+		}
+	}, {
+		"name": "宠物",
+		"alias": "chongwu",
+		"castshadow": 1,
+		"global_params": {
+			"param": [
+				{
+					"name": "宠物"
+				}, {
+					"name": "动作特效"
+				}
+			]
+		},
+		"channels": {
+			"channel": [
+				{
+					"name": "模型",
+					"alias": "model",
+					"target": "",
+					"type": -1,
+					"attach_to": -1,
+					"bbox": 1,
+					"pick": 1,
+					"castshadow": 1,
+					"source": {
+						"group": "宠物",
+						"enum": "模型"
+					}
+				}, {
+					"name": "动作",
+					"alias": "",
+					"target": "模型",
+					"type": 3,
+					"attach_to": 0,
+					"sound": 1,
+					"source": {
+						"group": "宠物",
+						"enum": "普通动作"
+					}
+				}, {
+					"name": "宠物特效",
+					"alias": "",
+					"target": "模型",
+					"type": 6,
+					"attach_to": 72,
+					"dims": 8,
+					"source": {
+						"group": "宠物",
+						"enum": "宠物特效"
+					}
+				}, {
+					"name": "动作特效",
+					"alias": "",
+					"target": "模型",
+					"type": 6,
+					"attach_to": "01",
+					"sound": 1,
+					"source": {
+						"group": "宠物",
+						"enum": "动作特效"
+					}
+				}, {
+					"name": "摄像机",
+					"alias": "",
+					"target": "",
+					"type": 0,
+					"source": {
+						"group": "宠物",
+						"enum": "摄像机"
+					}
+				}
+			]
+		},
+		"textures": {
+			"channel": {
+				"name": "宠物贴图",
+				"alias": "texture",
+				"target": "模型",
+				"type": -1,
+				"attach_to": "",
+				"source": {
+					"group": "宠物",
+					"enum": "宠物贴图"
+				}
+			}
+		}
+	}
+]

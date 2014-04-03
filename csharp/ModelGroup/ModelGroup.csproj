@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8940131B-3BBE-4520-A36A-D5F21DF38CCE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ModelGroup</RootNamespace>
+    <AssemblyName>ModelGroup</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Channel\ChannelSource.cs" />
+    <Compile Include="Channel\ColorChannel.cs" />
+    <Compile Include="Channel\Flags.cs" />
+    <Compile Include="Channel\ModelChannel.cs" />
+    <Compile Include="Channel\ModelGroupType.cs" />
+    <Compile Include="ModelFileConfig.cs" />
+    <Compile Include="ModelGroupConfig.cs" />
+    <Compile Include="NamedItem.cs" />
+    <Compile Include="PartType.cs" />
+    <Compile Include="Enum\Item.cs" />
+    <Compile Include="Enum\Param.cs" />
+    <Compile Include="Resource\Componets.cs" />
+    <Compile Include="Resource\FormatFile.cs" />
+    <Compile Include="Resource\ModelGroupType.cs" />
+    <Compile Include="Resource\Resource.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\LitJson\LitJson.csproj">
+      <Project>{256B1F9F-3729-4B4B-8D23-14FF12F57F4E}</Project>
+      <Name>LitJson</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+$ cat .gitignore
+bin/
+bin-debug/
+libs/
+.settings/
+.actionScriptProperties
+.flexProperties
+.project
