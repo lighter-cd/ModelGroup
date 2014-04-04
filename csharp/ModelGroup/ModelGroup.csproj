@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{8940131B-3BBE-4520-A36A-D5F21DF38CCE}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ModelGroup</RootNamespace>
+    <RootNamespace>ModelGroup.config</RootNamespace>
     <AssemblyName>ModelGroup</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
@@ -34,21 +34,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Channel\ChannelSource.cs" />
-    <Compile Include="Channel\ColorChannel.cs" />
-    <Compile Include="Channel\Flags.cs" />
-    <Compile Include="Channel\ModelChannel.cs" />
-    <Compile Include="Channel\ModelGroupType.cs" />
-    <Compile Include="ModelFileConfig.cs" />
-    <Compile Include="ModelGroupConfig.cs" />
-    <Compile Include="NamedItem.cs" />
-    <Compile Include="PartType.cs" />
-    <Compile Include="Enum\Item.cs" />
-    <Compile Include="Enum\Param.cs" />
-    <Compile Include="Resource\Componets.cs" />
-    <Compile Include="Resource\FormatFile.cs" />
-    <Compile Include="Resource\ModelGroupType.cs" />
-    <Compile Include="Resource\Resource.cs" />
+    <Compile Include="Config\Channel\ChannelSource.cs" />
+    <Compile Include="Config\Channel\ColorChannel.cs" />
+    <Compile Include="Config\Channel\Flags.cs" />
+    <Compile Include="Config\Channel\ModelChannel.cs" />
+    <Compile Include="Config\Channel\ModelGroupType.cs" />
+    <Compile Include="Config\ModelFileConfig.cs" />
+    <Compile Include="Config\ModelGroupConfig.cs" />
+    <Compile Include="Config\NamedItem.cs" />
+    <Compile Include="Config\PartType.cs" />
+    <Compile Include="Config\Enum\Item.cs" />
+    <Compile Include="Config\Enum\Enumeration.cs" />
+    <Compile Include="Config\Resource\Componets.cs" />
+    <Compile Include="Config\Resource\FormatFile.cs" />
+    <Compile Include="Config\Resource\ResourceType.cs" />
+    <Compile Include="Config\Resource\Resource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup />

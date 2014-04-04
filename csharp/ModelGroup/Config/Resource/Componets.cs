@@ -8,19 +8,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-namespace ModelGroup
+namespace ModelGroup.Config
 {
-	public enum PartType
+	namespace Resource
 	{
-		Root = -1,
-		Model,
-		Rigid,
-		Skined,
-		Animate,
-		Blend,
-		Figure,
-		Hook,
-		blockup
+		public enum Componets
+		{
+			Skeleton = 1,
+			Animate = 1 << 1,
+			Mesh = 1 << 2,
+			Hook = 1 << 3,
+			Camera = 1 << 4,
+			Light = 1 << 5
+		}
 	}
 }
 

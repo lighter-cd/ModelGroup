@@ -1,5 +1,5 @@
 using System;
-using ModelGroup;
+using ModelGroup.Config;
 
 namespace ModelGroupTest
 {

@@ -11,12 +11,12 @@ using System;
 using System.Collections.Generic;
 using LitJson;
 
-namespace ModelGroup
+namespace ModelGroup.Config
 {
 	public class ModelFileConfig
 	{
-		private Dictionary<String,Enum.Param> _dictEnumParams;	// 所有枚举列表的集合
-		private List<Resource.ModelGroupType> _listModelTypes;	// 所有资源的集合
+		private Dictionary<String,Enum.Enumeration> _dictEnumParams;	// 所有枚举列表的集合
+		private List<Resource.ResourceType> _listModelTypes;	// 所有资源的集合
 		private String _path;
 
 		private static ModelFileConfig instance = null;
@@ -37,8 +37,8 @@ namespace ModelGroup
 			{
 				return;
 			}
-			_dictEnumParams = new Dictionary<string, ModelGroup.Enum.Param> ();
-			_listModelTypes = new List<ModelGroup.Resource.ModelGroupType> ();
+			_dictEnumParams = new Dictionary<string, ModelGroup.Config.Enum.Enumeration> ();
+			_listModelTypes = new List<ModelGroup.Config.Resource.ResourceType> ();
 		}
 
 		public String path 
@@ -47,7 +47,7 @@ namespace ModelGroup
 			set {_path = value;}
 		}
 
-		public Enum.Param getEnumParam(String name)
+		public Enum.Enumeration getEnumParam(String name)
 		{
 			if (_dictEnumParams.ContainsKey (name)) {
 				return _dictEnumParams[name];
@@ -59,16 +59,16 @@ namespace ModelGroup
 		{
 			get {return _listModelTypes.Count;}
 		}
-		public Resource.ModelGroupType getModelGroupType(int index)
+		public Resource.ResourceType getModelGroupType(int index)
 		{
 			if (index >= 0 && index < _listModelTypes.Count) {
 				return _listModelTypes [index];
 			}
 			return null;
 		}
-		public Resource.ModelGroupType getModelGroupType(String name)
+		public Resource.ResourceType getModelGroupType(String name)
 		{
-			foreach (Resource.ModelGroupType g in _listModelTypes) {
+			foreach (Resource.ResourceType g in _listModelTypes) {
 				if(g.Name == name){
 					return g;
 				}
@@ -85,7 +85,7 @@ namespace ModelGroup
 				{
 					if(item.Keys.Contains("name") && item.Keys.Contains("alias"))
                     {
-						Enum.Param ep = new Enum.Param((String)item["name"],(String)item["alias"]);
+						Enum.Enumeration ep = new Enum.Enumeration((String)item["name"],(String)item["alias"]);
                         if (item.Keys.Contains("item"))
                         {
                             JsonData subItems = item["item"];
@@ -139,7 +139,7 @@ namespace ModelGroup
                 {
                     if (itemModelType.Keys.Contains("name") && itemModelType.Keys.Contains("alias"))
                     {
-                        Resource.ModelGroupType mt = new Resource.ModelGroupType((String)itemModelType["name"], (String)itemModelType["alias"]);
+                        Resource.ResourceType mt = new Resource.ResourceType((String)itemModelType["name"], (String)itemModelType["alias"]);
                         if (itemModelType.Keys.Contains("type"))
                         {
                             JsonData arrayResource = itemModelType["type"];
@@ -180,7 +180,7 @@ namespace ModelGroup
             return false;
         }
 
-        private void newResource(Resource.ModelGroupType mt,JsonData resource)
+        private void newResource(Resource.ResourceType mt,JsonData resource)
         {
             Resource.FormatFile.FileType type = (resource.Keys.Contains("type")) ?
                   (Resource.FormatFile.FileType)(int)resource["type"] : Resource.FormatFile.FileType.FT_MODEL;

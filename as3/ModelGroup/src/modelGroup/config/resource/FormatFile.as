@@ -1,7 +1,7 @@
 package modelGroup.config.resource
 {
 import modelGroup.config.ModelFileConfig;
-import modelGroup.config.enum.EnumParam;
+import modelGroup.config.enum.Enumeration;
 
 import flash.utils.Dictionary;
 
@@ -33,7 +33,7 @@ public class FormatFile
                 var param:String = current.substr(start+1, end - start -1);
                 if (param in enums)
                 {
-                    var enum:EnumParam = enums[param];
+                    var enum:Enumeration = enums[param];
                     var p:Param = new Param(start, end, enum);
                     vecParams.push(p);
                 }
@@ -68,7 +68,7 @@ public class FormatFile
         return vecParams ? vecParams.length : 0;
     }
 
-    public function getParam(n:uint):EnumParam
+    public function getParam(n:uint):Enumeration
     {
         return vecParams ? vecParams[n].enumParam : null;
     }
@@ -95,15 +95,15 @@ public class FormatFile
 }
 }
 
-import modelGroup.config.enum.EnumParam;
+import modelGroup.config.enum.Enumeration;
 
 internal class Param
 {
     public var nStart:int;
     public var nEnd:int;
-    public var enumParam:EnumParam;
+    public var enumParam:Enumeration;
 
-    public function Param(start:int, end:int, _enumParam:EnumParam)
+    public function Param(start:int, end:int, _enumParam:Enumeration)
     {
         nStart = start;
         nEnd = end;

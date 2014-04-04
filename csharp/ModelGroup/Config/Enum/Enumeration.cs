@@ -9,16 +9,16 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
-namespace ModelGroup
+namespace ModelGroup.Config
 {
 	namespace Enum 
 	{
-		public class Param : NamedItem
+		public class Enumeration : NamedItem
 		{
 			private List<Item> _listItems;
 			private Dictionary<uint,Item> _dictItems;
 
-			public Param (String name,String alias)
+			public Enumeration (String name,String alias)
 				:base(name,alias)
 			{
 				_listItems = new List<Item>();

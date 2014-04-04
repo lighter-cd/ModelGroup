@@ -5,7 +5,7 @@ import modelGroup.config.channel.ColorChannel;
 import modelGroup.config.channel.Flags;
 import modelGroup.config.channel.ModelChannel;
 import modelGroup.config.channel.ModelGroupType;
-import modelGroup.config.enum.EnumParam;
+import modelGroup.config.enum.Enumeration;
 
 public class ModelGroupConfig
 {
@@ -153,7 +153,7 @@ public class ModelGroupConfig
         return vecGroupTypes[n];
     }
 	
-	public function GetEnumParam(name:String):EnumParam
+	public function GetEnumParam(name:String):Enumeration
 	{
 		if(name in modelFileConfig.MapEnumParams){
 			return modelFileConfig.MapEnumParams[name];

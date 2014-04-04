@@ -1,7 +1,7 @@
 package modelGroup.config.channel
 {
 import modelGroup.config.NamedItem;
-import modelGroup.config.enum.EnumParam;
+import modelGroup.config.enum.Enumeration;
 
 public class ModelGroupType extends NamedItem
 {
@@ -12,14 +12,14 @@ public class ModelGroupType extends NamedItem
     private var real_channels:uint;		// 真正的频道数量(包括数组频道的维度在内的数量)
     private var channelIndices:Array;	// 频道索引与真正的频道数组(包括数组频道的维度在内)下标的对应  UINT
 
-    private var globalParams:Vector.<EnumParam>;	// 全局参数
+    private var globalParams:Vector.<Enumeration>;	// 全局参数
 
     private var index:uint;				// 模型组编号
 
     public function ModelGroupType(name:String, alias:String, _index:uint)
     {
         super(name, alias);
-        globalParams = new Vector.<EnumParam>;
+        globalParams = new Vector.<Enumeration>;
         vecModels = new Vector.<ModelChannel>;
         vecTextures = new Vector.<ModelChannel>;
         vecColors = new Vector.<ColorChannel>;
@@ -95,7 +95,7 @@ public class ModelGroupType extends NamedItem
 
     }
 
-    public function get GlobalParamsVector():Vector.<EnumParam>
+    public function get GlobalParamsVector():Vector.<Enumeration>
     {
         return this.globalParams;
     }
@@ -105,12 +105,12 @@ public class ModelGroupType extends NamedItem
         return this.globalParams.length;
     }
 
-    public function GetGlobalParam(n:uint):EnumParam
+    public function GetGlobalParam(n:uint):Enumeration
     {
         return this.globalParams[n];
     }
 
-    public function AddGlobalParam(p:EnumParam):void
+    public function AddGlobalParam(p:Enumeration):void
     {
         this.globalParams.push(p);
     }

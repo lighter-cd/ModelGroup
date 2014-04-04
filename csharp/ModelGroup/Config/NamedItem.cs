@@ -8,18 +8,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-namespace ModelGroup
+namespace ModelGroup.Config
 {
-	namespace Resource
+	public class NamedItem
 	{
-		public enum Componets
+		private String []_name;
+		public NamedItem (String name,String alias)
 		{
-			Skeleton = 1,
-			Animate = 1 << 1,
-			Mesh = 1 << 2,
-			Hook = 1 << 3,
-			Camera = 1 << 4,
-			Light = 1 << 5
+			_name = new string[2]{name,alias};
+		}
+
+		public String getName(bool alias)
+		{
+			return _name [alias ? 1 : 0];
+		}
+
+		public String Name {
+			get { return _name[0]; }
+		}
+		public String Alias{
+			get { return _name [1];}
 		}
 	}
 }

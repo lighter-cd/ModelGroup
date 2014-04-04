@@ -10,7 +10,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ModelGroup
+namespace ModelGroup.Config
 {
 	namespace Resource
 	{
@@ -18,9 +18,9 @@ namespace ModelGroup
 		{
 			public int nStart;
 			public int nEnd;
-			public Enum.Param enumParam;
+			public Enum.Enumeration enumParam;
 			
-			public Param(int start, int end, Enum.Param _enumParam)
+			public Param(int start, int end, Enum.Enumeration _enumParam)
 			{
 				nStart = start;
 				nEnd = end;
@@ -59,7 +59,7 @@ namespace ModelGroup
 					if (start >= 0 && end >= 0)
 					{
 						String param = current.Substring(start+1, end - start -1);
-						Enum.Param _enum = ModelFileConfig.Instance.getEnumParam(param);
+						Enum.Enumeration _enum = ModelFileConfig.Instance.getEnumParam(param);
 						if (_enum != null){
 							Param p = new Param(start, end, _enum);
 							_vecParams.Add(p);
@@ -73,7 +73,7 @@ namespace ModelGroup
 				}
 			}
 
-			public Enum.Param getParam(int n)
+			public Enum.Enumeration getParam(int n)
 			{
 				return (_vecParams != null) ? _vecParams[n].enumParam : null;
 			}

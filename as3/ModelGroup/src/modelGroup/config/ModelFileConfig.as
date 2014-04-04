@@ -1,9 +1,9 @@
 package modelGroup.config
 {
-import modelGroup.config.enum.EnumParam;
+import modelGroup.config.enum.Enumeration;
 import modelGroup.config.resource.Componets;
 import modelGroup.config.resource.FormatFile;
-import modelGroup.config.resource.ModelType;
+import modelGroup.config.resource.ResourceType;
 import modelGroup.config.resource.Resource;
 
 import flash.utils.Dictionary;
@@ -15,7 +15,7 @@ import flash.utils.Dictionary;
 public class ModelFileConfig
 {
     private var mapEnumParams:Dictionary;			// 所有枚举列表的集合
-    private var vecModelTypes:Vector.<ModelType>;	// 所有资源的集合
+    private var vecModelTypes:Vector.<ResourceType>;	// 所有资源的集合
     private var path:String;
     private static var instance:ModelFileConfig;
 
@@ -35,7 +35,7 @@ public class ModelFileConfig
             return;
         }
         mapEnumParams = new Dictionary();
-        vecModelTypes = new Vector.<ModelType>();
+        vecModelTypes = new Vector.<ResourceType>();
     }
 
     public function get Path():String
@@ -58,12 +58,12 @@ public class ModelFileConfig
         return vecModelTypes.length;
     }
 
-    public function getModelType(n:uint):ModelType
+    public function getModelType(n:uint):ResourceType
     {
         return vecModelTypes[n];
     }
 
-    public function getModelTypeByName(name:String):ModelType
+    public function getModelTypeByName(name:String):ResourceType
     {
         for (var i:int = 0; i < vecModelTypes.length; i++)
         {
@@ -93,7 +93,7 @@ public class ModelFileConfig
             for (var i:int = 0; i < array.length; i++)
             {
                 var item:Object = array[i];
-                var ep:EnumParam = new EnumParam(item.name, item.alias);
+                var ep:Enumeration = new Enumeration(item.name, item.alias);
 
                 var subArray:Array = (item.item is Array) ? item.item : new Array(item.item);
                 for (var j:int = 0; j < subArray.length; j++)
@@ -116,7 +116,7 @@ public class ModelFileConfig
         for (var i:int = 0; i < arrayModelType.length; i++)
         {
             var itemModelType:Object = arrayModelType[i];
-            var mt:ModelType = new ModelType(itemModelType.name, itemModelType.alias);
+            var mt:ResourceType = new ResourceType(itemModelType.name, itemModelType.alias);
 
             var arrayResource:Array = (itemModelType.type is Array) ? itemModelType.type : new Array(itemModelType.type);
             for (var j:int = 0; j < arrayResource.length; j++)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using LitJson;
 
-namespace ModelGroup
+namespace ModelGroup.Config
 {
     public class ModelGroupConfig
     {
@@ -47,7 +47,7 @@ namespace ModelGroup
                     {
                         foreach(JsonData param in global_params)
                         {
-                            Enum.Param p = modelFileConfig.getEnumParam((String)param["name"]);
+                            Enum.Enumeration p = modelFileConfig.getEnumParam((String)param["name"]);
                             if (p != null)
                             {
                                 mt.AddGlobalParam(p);
@@ -56,7 +56,7 @@ namespace ModelGroup
                     }
                     else
                     {
-                        Enum.Param p = modelFileConfig.getEnumParam((String)global_params["name"]);
+                        Enum.Enumeration p = modelFileConfig.getEnumParam((String)global_params["name"]);
                         if (p != null)
                         {
                             mt.AddGlobalParam(p);
@@ -207,7 +207,7 @@ namespace ModelGroup
             return vecGroupTypes[n];
         }
 	
-	    public Enum.Param GetEnumParam(String name)
+	    public Enum.Enumeration GetEnumParam(String name)
 	    {
 		    return modelFileConfig.getEnumParam(name);
 	    }

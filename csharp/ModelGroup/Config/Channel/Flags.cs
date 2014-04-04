@@ -1,4 +1,4 @@
-﻿namespace ModelGroup
+﻿namespace ModelGroup.Config
 {
     namespace Channel
     {

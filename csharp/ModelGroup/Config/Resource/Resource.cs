@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-namespace ModelGroup
+namespace ModelGroup.Config
 {
 	namespace Resource
 	{

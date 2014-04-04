@@ -8,27 +8,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-namespace ModelGroup
+namespace ModelGroup.Config
 {
-	public class NamedItem
+	public enum PartType
 	{
-		private String []_name;
-		public NamedItem (String name,String alias)
-		{
-			_name = new string[2]{name,alias};
-		}
-
-		public String getName(bool alias)
-		{
-			return _name [alias ? 1 : 0];
-		}
-
-		public String Name {
-			get { return _name[0]; }
-		}
-		public String Alias{
-			get { return _name [1];}
-		}
+		Root = -1,
+		Model,
+		Rigid,
+		Skined,
+		Animate,
+		Blend,
+		Figure,
+		Hook,
+		blockup
 	}
 }
 

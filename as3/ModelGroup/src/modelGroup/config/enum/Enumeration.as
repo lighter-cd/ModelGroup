@@ -8,12 +8,12 @@ import flash.utils.Dictionary;
  * 模型组配置中的一个参数可能出现的ID和命名列举。
  * 对应 命名.json中的一个子项。
  */
-public class EnumParam extends NamedItem
+public class Enumeration extends NamedItem
 {
     private var mapItems:Dictionary = new Dictionary();
     private var _vecItems:Vector.<Item> = new Vector.<Item>();
 
-    public function EnumParam(name:String, alias:String)
+    public function Enumeration(name:String, alias:String)
     {
         super(name, alias);
     }

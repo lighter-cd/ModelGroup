@@ -8,34 +8,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-
-namespace ModelGroup
+namespace ModelGroup.Config
 {
-	namespace Resource
+	namespace Enum
 	{
-		public class ModelGroupType : NamedItem
+		public class Item : NamedItem
 		{
-			private List<Resource> _vecResources;
+			private uint _id;
+			
 
-			public ModelGroupType (String name, String alias)
+			public Item (uint id,String name,String alias)
 				:base(name,alias)
 			{
-				_vecResources = new List<Resource>();
+				_id = id;
 			}
 
-			public int Resources 
-			{
-				get {return _vecResources.Count;}
-			}
-
-			public Resource getResource(int n)
-			{
-				return _vecResources [n];
-			}
-			public void addResource(Resource r)
-			{
-				_vecResources.Add (r);
+			public uint id {
+				get {return _id;}
 			}
 		}
 	}

@@ -1,23 +1,23 @@
 package modelGroup.config.channel
 {
 import modelGroup.config.ModelFileConfig;
-import modelGroup.config.enum.EnumParam;
-import modelGroup.config.resource.ModelType;
+import modelGroup.config.enum.Enumeration;
+import modelGroup.config.resource.ResourceType;
 import modelGroup.config.resource.Resource;
 
 import flash.utils.Dictionary;
 
 public class ChannelSource
 {
-    public var modelType:ModelType;
+    public var modelType:ResourceType;
     public var resource:Resource;
-    public var filterParam:EnumParam;
+    public var filterParam:Enumeration;
     public var filterValue:int;
 
     public var globalParamIndex:Array;	// 本频道的四个参数与全局函数的对应关系,下标是全局参数索引顺序
     public var filterParamIndex:int;	// 本频道的过滤条件在四个参数中的位置
     public var channelParamIndex:int;	// 本频道剩余的需要确定的参数在四个参数中的位置
-    public var channelParam:EnumParam; // 本频道剩余的需要确定的参数的类型
+    public var channelParam:Enumeration; // 本频道剩余的需要确定的参数的类型
 
     public function ChannelSource(_modelType:String, _resource:String, _filterEnum:String, _value:int)
     {
@@ -25,7 +25,7 @@ public class ChannelSource
         var nTypes:int = mfc.ModelTypes;
         for (var i:int = 0; i < nTypes; i++)
         {
-            var mt:ModelType = mfc.getModelType(i);
+            var mt:ResourceType = mfc.getModelType(i);
             if (_modelType == mt.Name)
             {
                 modelType = mt;
@@ -58,7 +58,7 @@ public class ChannelSource
 
     }
 
-    public function BuildParamIndex(vecGlobalParams:Vector.<EnumParam>):void
+    public function BuildParamIndex(vecGlobalParams:Vector.<Enumeration>):void
     {
         globalParamIndex = new Array(vecGlobalParams.length);
         for (var n:int = 0; n < vecGlobalParams.length; n++)
@@ -76,7 +76,7 @@ public class ChannelSource
             var global:String = vecGlobalParams[i].Name;
             for (var p:int = 0; p < nParams; p++)
             {
-                var param:EnumParam = resource.File.getParam(p);
+                var param:Enumeration = resource.File.getParam(p);
                 if (global == param.Name)
                 {
                     globalParamIndex[i] = p;

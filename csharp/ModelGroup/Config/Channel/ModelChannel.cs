@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ModelGroup.Channel
+namespace ModelGroup.Config.Channel
 {
     public class ModelChannel : NamedItem
     {
@@ -32,7 +32,7 @@ namespace ModelGroup.Channel
                 {
                     this.no = Convert.ToInt32(attachTo);
                 }
-                catch(Exception e)
+                catch(Exception)
                 {
                     this.no = 0;
                 }

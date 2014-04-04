@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ModelGroup.Channel
+namespace ModelGroup.Config.Channel
 {
     public class ModelGroupType : NamedItem
     {
@@ -14,7 +14,7 @@ namespace ModelGroup.Channel
         private int real_channels;		        // 真正的频道数量(包括数组频道的维度在内的数量)
         private int[] channelIndices;	        // 频道索引与真正的频道数组(包括数组频道的维度在内)下标的对应  UINT
 
-        private List<Enum.Param> globalParams;	// 全局参数
+        private List<Enum.Enumeration> globalParams;	// 全局参数
 
         private uint index;				        // 模型组编号
 
@@ -22,7 +22,7 @@ namespace ModelGroup.Channel
         public ModelGroupType(String name, String alias, uint _index)
             :base(name,alias)
         {
-            globalParams = new List<Enum.Param>();
+            globalParams = new List<Enum.Enumeration>();
             vecModels = new List<ModelChannel>();
             vecTextures = new List<ModelChannel>();
             vecColors = new List<ColorChannel>();
@@ -107,7 +107,7 @@ namespace ModelGroup.Channel
         }
 
 
-        public List<Enum.Param> GlobalParamsVector
+        public List<Enum.Enumeration> GlobalParamsVector
         {
             get { return globalParams; }
         }
@@ -117,12 +117,12 @@ namespace ModelGroup.Channel
             get {return this.globalParams.Count;}
         }
 
-        public Enum.Param GetGlobalParam(int n)
+        public Enum.Enumeration GetGlobalParam(int n)
         {
             return this.globalParams[n];
         }
 
-        public void AddGlobalParam(Enum.Param p)
+        public void AddGlobalParam(Enum.Enumeration p)
         {
             this.globalParams.Add(p);
         }
