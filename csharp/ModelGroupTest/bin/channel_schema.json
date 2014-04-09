@@ -1,0 +1,237 @@
+{
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required": false,
+	"properties": {
+		"flags": {
+			"type": "array",
+			"id": "http://jsonschema.net/flags",
+			"required": false,
+			"items": {
+				"type": "string",
+				"id": "http://jsonschema.net/flags/0",
+				"required": false
+			}
+		},
+		"groups": {
+			"type": "array",
+			"id": "http://jsonschema.net/groups",
+			"required": false,
+			"items": {
+				"type": "object",
+				"id": "http://jsonschema.net/groups/0",
+				"required": false,
+				"properties": {
+					"alias": {
+						"type": "string",
+						"id": "http://jsonschema.net/groups/0/alias",
+						"required": false
+					},
+					"channels": {
+						"type": "array",
+						"id": "http://jsonschema.net/groups/0/channels",
+						"required": false,
+						"items": {
+							"type": "object",
+							"id": "http://jsonschema.net/groups/0/channels/0",
+							"required": false,
+							"properties": {
+								"alias": {
+									"type": "string",
+									"id": "http://jsonschema.net/groups/0/channels/0/alias",
+									"required": false
+								},
+								"attach_bone": {
+									"type": "string",
+									"id": "http://jsonschema.net/groups/0/channels/0/attach_bone",
+									"required": false
+								},
+								"attach_to": {
+									"type": "number",
+									"id": "http://jsonschema.net/groups/0/channels/0/attach_to",
+									"required": false
+								},
+								"dims": {
+									"type": "number",
+									"id": "http://jsonschema.net/groups/0/channels/0/dims",
+									"required": false
+								},
+								"flags": {
+									"type": "array",
+									"id": "http://jsonschema.net/groups/0/channels/0/flags",
+									"required": false,
+									"items": {
+										"type": "string",
+										"id": "http://jsonschema.net/groups/0/channels/0/flags/0",
+										"required": false
+									}
+								},
+								"name": {
+									"type": "string",
+									"id": "http://jsonschema.net/groups/0/channels/0/name",
+									"required": false
+								},
+								"source": {
+									"type": "array",
+									"id": "http://jsonschema.net/groups/0/channels/0/source",
+									"required": false,
+									"items": {
+										"type": "object",
+										"id": "http://jsonschema.net/groups/0/channels/0/source/0",
+										"required": false,
+										"properties": {
+											"enum": {
+												"type": "string",
+												"id": "http://jsonschema.net/groups/0/channels/0/source/0/enum",
+												"required": false
+											},
+											"group": {
+												"type": "string",
+												"id": "http://jsonschema.net/groups/0/channels/0/source/0/group",
+												"required": false
+											}
+										}
+									}
+								},
+								"target": {
+									"type": "string",
+									"id": "http://jsonschema.net/groups/0/channels/0/target",
+									"required": false
+								},
+								"type": {
+									"type": "number",
+									"id": "http://jsonschema.net/groups/0/channels/0/type",
+									"required": false
+								}
+							}
+						}
+					},
+					"colors": {
+						"type": "array",
+						"id": "http://jsonschema.net/groups/0/colors",
+						"required": false,
+						"items": {
+							"type": "object",
+							"id": "http://jsonschema.net/groups/0/colors/0",
+							"required": false,
+							"properties": {
+								"alias": {
+									"type": "string",
+									"id": "http://jsonschema.net/groups/0/colors/0/alias",
+									"required": false
+								},
+								"name": {
+									"type": "string",
+									"id": "http://jsonschema.net/groups/0/colors/0/name",
+									"required": false
+								},
+								"target": {
+									"type": "array",
+									"id": "http://jsonschema.net/groups/0/colors/0/target",
+									"required": false,
+									"items": {
+										"type": "object",
+										"id": "http://jsonschema.net/groups/0/colors/0/target/0",
+										"required": false,
+										"properties": {
+											"channel": {
+												"type": "string",
+												"id": "http://jsonschema.net/groups/0/colors/0/target/0/channel",
+												"required": false
+											},
+											"element": {
+												"type": "string",
+												"id": "http://jsonschema.net/groups/0/colors/0/target/0/element",
+												"required": false
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"global_params": {
+						"type": "array",
+						"id": "http://jsonschema.net/groups/0/global_params",
+						"required": false,
+						"items": {
+							"type": "string",
+							"id": "http://jsonschema.net/groups/0/global_params/0",
+							"required": false
+						}
+					},
+					"name": {
+						"type": "string",
+						"id": "http://jsonschema.net/groups/0/name",
+						"required": false
+					},
+					"textures": {
+						"type": "array",
+						"id": "http://jsonschema.net/groups/0/textures",
+						"required": false,
+						"items": {
+							"type": "object",
+							"id": "http://jsonschema.net/groups/0/textures/0",
+							"required": false,
+							"properties": {
+								"alias": {
+									"type": "string",
+									"id": "http://jsonschema.net/groups/0/textures/0/alias",
+									"required": false
+								},
+								"attach_bone": {
+									"type": "string",
+									"id": "http://jsonschema.net/groups/0/textures/0/attach_bone",
+									"required": false
+								},
+								"attach_to": {
+									"type": "number",
+									"id": "http://jsonschema.net/groups/0/textures/0/attach_to",
+									"required": false
+								},
+								"name": {
+									"type": "string",
+									"id": "http://jsonschema.net/groups/0/textures/0/name",
+									"required": false
+								},
+								"source": {
+									"type": "array",
+									"id": "http://jsonschema.net/groups/0/textures/0/source",
+									"required": false,
+									"items": {
+										"type": "object",
+										"id": "http://jsonschema.net/groups/0/textures/0/source/0",
+										"required": false,
+										"properties": {
+											"enum": {
+												"type": "string",
+												"id": "http://jsonschema.net/groups/0/textures/0/source/0/enum",
+												"required": false
+											},
+											"group": {
+												"type": "string",
+												"id": "http://jsonschema.net/groups/0/textures/0/source/0/group",
+												"required": false
+											}
+										}
+									}
+								},
+								"target": {
+									"type": "string",
+									"id": "http://jsonschema.net/groups/0/textures/0/target",
+									"required": false
+								},
+								"type": {
+									"type": "number",
+									"id": "http://jsonschema.net/groups/0/textures/0/type",
+									"required": false
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

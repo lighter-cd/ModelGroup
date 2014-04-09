@@ -1,28 +1,24 @@
-[
-	{
-		"name": "玩家",
-		"alias": "player",
-		"castshadow": 1,
-		"global_params": {
-			"param": [
-				{
-					"name": "职业"
-				}, {
-					"name": "性别"
-				}
-			]
-		},
-		"channels": {
-			"channel": [
+{
+	"flags": [
+		"bbox", "pick", "castshadow", "shadowdecal", "hidden", "asyncLoad", "sound"
+	],
+	"groups": [
+		{
+			"name": "玩家",
+			"alias": "player",
+			"global_params": [
+				"职业", "性别"
+			],
+			"channels": [
 				{
 					"name": "裸体",
 					"alias": "body",
 					"target": "",
 					"type": -1,
 					"attach_to": -1,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
+					"flags": [
+						"bbox", "pick", "castshadow"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -34,10 +30,10 @@
 					"alias": "head",
 					"target": "裸体",
 					"type": 1,
-					"attach_to": "Dummy头部对位",
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
+					"attach_bone": "Dummy头部对位",
+					"flags": [
+						"bbox", "pick", "castshadow"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -50,9 +46,9 @@
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 1,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
+					"flags": [
+						"bbox", "pick", "castshadow"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -65,10 +61,9 @@
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 2,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"hidden": 1,
+					"flags": [
+						"bbox", "pick", "castshadow", "hidden"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -83,10 +78,9 @@
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 3,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"hidden": 1,
+					"flags": [
+						"bbox", "pick", "castshadow", "hidden"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -101,10 +95,9 @@
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 4,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"hidden": 1,
+					"flags": [
+						"bbox", "pick", "castshadow", "hidden"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -119,10 +112,9 @@
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 5,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"hidden": 1,
+					"flags": [
+						"bbox", "pick", "castshadow", "hidden"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -137,10 +129,9 @@
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 6,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"hidden": 1,
+					"flags": [
+						"bbox", "pick", "castshadow", "hidden"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -155,10 +146,9 @@
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 7,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"hidden": 1,
+					"flags": [
+						"bbox", "pick", "castshadow", "hidden"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -173,10 +163,9 @@
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 8,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"hidden": 1,
+					"flags": [
+						"bbox", "pick", "castshadow", "hidden"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -191,10 +180,9 @@
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 9,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"hidden": 1,
+					"flags": [
+						"bbox", "pick", "castshadow", "hidden"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -209,10 +197,9 @@
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 10,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"hidden": 1,
+					"flags": [
+						"bbox", "pick", "castshadow", "hidden"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -226,11 +213,10 @@
 					"alias": "",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": "01",
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"asyncLoad": 1,
+					"attach_to": 1,
+					"flags": [
+						"bbox", "pick", "castshadow", "asyncLoad"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -242,8 +228,10 @@
 					"alias": "",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": "02",
-					"asyncLoad": 1,
+					"attach_to": 2,
+					"flags": [
+						"asyncLoad"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -256,7 +244,9 @@
 					"target": "裸体",
 					"type": 3,
 					"attach_to": 0,
-					"sound": 1,
+					"flags": [
+						"sound"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -289,8 +279,10 @@
 					"alias": "",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": "03",
-					"sound": 1,
+					"attach_to": 3,
+					"flags": [
+						"sound"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -317,8 +309,10 @@
 					"alias": "",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": "04",
-					"sound": 1,
+					"attach_to": 4,
+					"flags": [
+						"sound"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -333,10 +327,11 @@
 					"alias": "",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": "08",
+					"attach_to": 5,
 					"dims": 32,
-					"sound": 1,
-					"asyncLoad": 1,
+					"flags": [
+						"sound", "asyncLoad"
+					],
 					"source": [
 						{
 							"group": "技能",
@@ -357,8 +352,9 @@
 					"type": 6,
 					"attach_to": 40,
 					"dims": 32,
-					"sound": 1,
-					"asyncLoad": 1,
+					"flags": [
+						"sound", "asyncLoad"
+					],
 					"source": [
 						{
 							"group": "技能",
@@ -412,10 +408,11 @@
 					"alias": "shadow",
 					"target": "裸体",
 					"type": 1,
-					"attach_to": "Bip01",
+					"attach_bone": "Bip01",
 					"dims": 1,
-					"bbox": 0,
-					"shadowdecal": 1,
+					"flags": [
+						"bbox", "shadowdecal"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -428,10 +425,9 @@
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 11,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"hidden": 2,
+					"flags": [
+						"bbox", "pick", "castshadow", "hidden"
+					],
 					"source": [
 						{
 							"group": "玩家",
@@ -443,7 +439,7 @@
 					"alias": "",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": "Bip01",
+					"attach_to": 6,
 					"dims": 8,
 					"source": [
 						{
@@ -452,62 +448,65 @@
 						}
 					]
 				}
+			],
+			"textures": [
+				{
+					"name": "脑袋",
+					"alias": "header_texture",
+					"target": "脑袋",
+					"type": -1,
+					"attach_bone": "脑袋",
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "脑袋贴图"
+						}
+					]
+				}
+			],
+			"colors": [
+				{
+					"name": "法宝颜色",
+					"alias": "talisman_texture",
+					"target": [
+						{
+							"channel": "法宝",
+							"element": ""
+						}
+					]
+				}
 			]
-		},
-		"textures": {
-			"channel": {
-				"name": "脑袋",
-				"alias": "header_texture",
-				"target": "脑袋",
-				"type": -1,
-				"attach_to": "脑袋",
-				"source": {
-					"group": "玩家",
-					"enum": "脑袋贴图"
-				}
-			}
-		},
-		"colors": {
-			"color": {
-				"name": "法宝颜色",
-				"alias": "talisman_texture",
-				"target": {
-					"channel": "法宝",
-					"element": ""
-				}
-			}
-		}
-	}, {
-		"name": "NPC",
-		"alias": "NPC",
-		"castshadow": 1,
-		"global_params": {
-			"param": {
-				"name": "NPC"
-			}
-		},
-		"channels": {
-			"channel": [
+		}, {
+			"name": "NPC",
+			"alias": "NPC",
+			"global_params": [
+				"NPC"
+			],
+			"channels": [
 				{
 					"name": "模型",
 					"alias": "model",
 					"target": "",
 					"type": -1,
 					"attach_to": -1,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"source": {
-						"group": "NPC",
-						"enum": "模型"
-					}
+					"flags": [
+						"bbox", "pick", "castshadow"
+					],
+					"source": [
+						{
+							"group": "NPC",
+							"enum": "模型"
+						}
+					]
 				}, {
 					"name": "动作",
 					"alias": "",
 					"target": "模型",
 					"type": 3,
 					"attach_to": 0,
-					"sound": 1,
+					"flags": [
+						"sound"
+					],
 					"source": [
 						{
 							"group": "NPC",
@@ -522,31 +521,41 @@
 					"alias": "",
 					"target": "模型",
 					"type": 6,
-					"attach_to": "01",
-					"sound": 1,
-					"source": {
-						"group": "NPC",
-						"enum": "动作特效"
-					}
+					"attach_to": 1,
+					"flags": [
+						"sound"
+					],
+					"source": [
+						{
+							"group": "NPC",
+							"enum": "动作特效"
+						}
+					]
 				}, {
 					"name": "技能特效",
 					"alias": "",
 					"target": "模型",
 					"type": 6,
-					"attach_to": "02",
-					"sound": 1,
-					"source": {
-						"group": "NPC",
-						"enum": "技能特效"
-					}
+					"attach_to": 2,
+					"flags": [
+						"sound"
+					],
+					"source": [
+						{
+							"group": "NPC",
+							"enum": "技能特效"
+						}
+					]
 				}, {
 					"name": "被击特效",
 					"alias": "",
 					"target": "模型",
 					"type": 6,
-					"attach_to": "08",
+					"attach_to": 8,
 					"dims": 32,
-					"sound": 1,
+					"flags": [
+						"sound"
+					],
 					"source": [
 						{
 							"group": "技能",
@@ -567,7 +576,9 @@
 					"type": 6,
 					"attach_to": 40,
 					"dims": 32,
-					"sound": 1,
+					"flags": [
+						"sound"
+					],
 					"source": [
 						{
 							"group": "技能",
@@ -586,11 +597,13 @@
 					"alias": "",
 					"target": "模型",
 					"type": 1,
-					"attach_to": "任务Dummy",
-					"source": {
-						"group": "NPC",
-						"enum": "任务标记"
-					}
+					"attach_bone": "任务Dummy",
+					"source": [
+						{
+							"group": "NPC",
+							"enum": "任务标记"
+						}
+					]
 				}, {
 					"name": "通用特效",
 					"alias": "",
@@ -598,174 +611,190 @@
 					"type": 6,
 					"attach_to": 72,
 					"dims": 8,
-					"source": {
-						"group": "通用特效",
-						"enum": "角色通用"
-					}
+					"source": [
+						{
+							"group": "通用特效",
+							"enum": "角色通用"
+						}
+					]
 				}, {
 					"name": "阴影",
 					"alias": "shadow",
 					"target": "模型",
 					"type": 1,
-					"attach_to": "Bip01",
+					"attach_bone": "Bip01",
 					"dims": 1,
-					"bbox": 0,
-					"shadowdecal": 1,
-					"source": {
-						"group": "NPC",
-						"enum": "阴影"
-					}
+					"flags": [
+						"bbox", "shadowdecal"
+					],
+					"source": [
+						{
+							"group": "NPC",
+							"enum": "阴影"
+						}
+					]
 				}, {
 					"name": "范围",
 					"alias": "range",
 					"target": "模型",
 					"type": 0,
 					"dims": 1,
-					"bbox": 0,
-					"source": {
-						"group": "NPC",
-						"enum": "范围"
-					}
+					"flags": [
+						"bbox"
+					],
+					"source": [
+						{
+							"group": "NPC",
+							"enum": "范围"
+						}
+					]
+				}
+			],
+			"textures": [
+				{
+					"name": "NPC贴图",
+					"alias": "texture",
+					"target": "模型",
+					"type": -1,
+					"attach_bone": "模型",
+					"source": [
+						{
+							"group": "NPC",
+							"enum": "NPC贴图"
+						}
+					]
 				}
 			]
-		},
-		"textures": {
-			"channel": {
-				"name": "NPC贴图",
-				"alias": "texture",
-				"target": "模型",
-				"type": -1,
-				"attach_to": "模型",
-				"source": {
-					"group": "NPC",
-					"enum": "NPC贴图"
+		}, {
+			"name": "技能效果",
+			"alias": "effect",
+			"global_params": [
+				"技能"
+			],
+			"channels": [
+				{
+					"name": "效果",
+					"alias": "eff",
+					"target": "",
+					"type": -1,
+					"attach_to": -1,
+					"flags": [
+						"sound", "bbox"
+					],
+					"source": [
+						{
+							"group": "技能",
+							"enum": "效果"
+						}
+					]
 				}
-			}
-		}
-	}, {
-		"name": "技能效果",
-		"alias": "effect",
-		"global_params": {
-			"param": {
-				"name": "技能"
-			}
-		},
-		"channels": {
-			"channel": {
-				"name": "效果",
-				"alias": "eff",
-				"target": "",
-				"type": -1,
-				"attach_to": -1,
-				"sound": 1,
-				"bbox": 1,
-				"source": {
-					"group": "技能",
-					"enum": "效果"
-				}
-			}
-		}
-	}, {
-		"name": "坐骑",
-		"alias": "zuoji",
-		"castshadow": 1,
-		"global_params": {
-			"param": {
-				"name": "坐骑"
-			}
-		},
-		"channels": {
-			"channel": [
+			]
+		}, {
+			"name": "坐骑",
+			"alias": "zuoji",
+			"global_params": [
+				"坐骑"
+			],
+			"channels": [
 				{
 					"name": "模型",
 					"alias": "model",
 					"target": "",
 					"type": -1,
 					"attach_to": -1,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"source": {
-						"group": "坐骑",
-						"enum": "模型"
-					}
+					"flags": [
+						"bbox", "pick", "castshadow"
+					],
+					"source": [
+						{
+							"group": "坐骑",
+							"enum": "模型"
+						}
+					]
 				}, {
 					"name": "动作",
 					"alias": "",
 					"target": "模型",
 					"type": 3,
 					"attach_to": 0,
-					"sound": 1,
-					"source": {
-						"group": "坐骑",
-						"enum": "普通动作"
-					}
+					"flags": [
+						"sound"
+					],
+					"source": [
+						{
+							"group": "坐骑",
+							"enum": "普通动作"
+						}
+					]
 				}, {
 					"name": "动作特效",
 					"alias": "",
 					"target": "模型",
 					"type": 6,
-					"attach_to": "01",
-					"sound": 1,
-					"source": {
-						"group": "坐骑",
-						"enum": "动作特效"
-					}
+					"attach_to": 1,
+					"flags": [
+						"sound"
+					],
+					"source": [
+						{
+							"group": "坐骑",
+							"enum": "动作特效"
+						}
+					]
 				}
-			]
-		},
-		"textures": {
-			"channel": {
-				"name": "坐骑贴图",
-				"alias": "texture",
-				"target": "模型",
-				"type": -1,
-				"attach_to": "",
-				"source": {
-					"group": "坐骑",
-					"enum": "坐骑贴图"
-				}
-			}
-		}
-	}, {
-		"name": "宠物",
-		"alias": "chongwu",
-		"castshadow": 1,
-		"global_params": {
-			"param": [
+			],
+			"textures": [
 				{
-					"name": "宠物"
-				}, {
-					"name": "动作特效"
+					"name": "坐骑贴图",
+					"alias": "texture",
+					"target": "模型",
+					"type": -1,
+					"attach_bone": "",
+					"source": [
+						{
+							"group": "坐骑",
+							"enum": "坐骑贴图"
+						}
+					]
 				}
 			]
-		},
-		"channels": {
-			"channel": [
+		}, {
+			"name": "宠物",
+			"alias": "chongwu",
+			"global_params": [
+				"宠物", "动作特效"
+			],
+			"channels": [
 				{
 					"name": "模型",
 					"alias": "model",
 					"target": "",
 					"type": -1,
 					"attach_to": -1,
-					"bbox": 1,
-					"pick": 1,
-					"castshadow": 1,
-					"source": {
-						"group": "宠物",
-						"enum": "模型"
-					}
+					"flags": [
+						"bbox", "pick", "castshadow"
+					],
+					"source": [
+						{
+							"group": "宠物",
+							"enum": "模型"
+						}
+					]
 				}, {
 					"name": "动作",
 					"alias": "",
 					"target": "模型",
 					"type": 3,
 					"attach_to": 0,
-					"sound": 1,
-					"source": {
-						"group": "宠物",
-						"enum": "普通动作"
-					}
+					"flags": [
+						"sound"
+					],
+					"source": [
+						{
+							"group": "宠物",
+							"enum": "普通动作"
+						}
+					]
 				}, {
 					"name": "宠物特效",
 					"alias": "",
@@ -773,45 +802,55 @@
 					"type": 6,
 					"attach_to": 72,
 					"dims": 8,
-					"source": {
-						"group": "宠物",
-						"enum": "宠物特效"
-					}
+					"source": [
+						{
+							"group": "宠物",
+							"enum": "宠物特效"
+						}
+					]
 				}, {
 					"name": "动作特效",
 					"alias": "",
 					"target": "模型",
 					"type": 6,
-					"attach_to": "01",
-					"sound": 1,
-					"source": {
-						"group": "宠物",
-						"enum": "动作特效"
-					}
+					"attach_to": 1,
+					"flags": [
+						"sound"
+					],
+					"source": [
+						{
+							"group": "宠物",
+							"enum": "动作特效"
+						}
+					]
 				}, {
 					"name": "摄像机",
 					"alias": "",
 					"target": "",
 					"type": 0,
-					"source": {
-						"group": "宠物",
-						"enum": "摄像机"
-					}
+					"source": [
+						{
+							"group": "宠物",
+							"enum": "摄像机"
+						}
+					]
+				}
+			],
+			"textures": [
+				{
+					"name": "宠物贴图",
+					"alias": "texture",
+					"target": "模型",
+					"type": -1,
+					"attach_bone": "",
+					"source": [
+						{
+							"group": "宠物",
+							"enum": "宠物贴图"
+						}
+					]
 				}
 			]
-		},
-		"textures": {
-			"channel": {
-				"name": "宠物贴图",
-				"alias": "texture",
-				"target": "模型",
-				"type": -1,
-				"attach_to": "",
-				"source": {
-					"group": "宠物",
-					"enum": "宠物贴图"
-				}
-			}
 		}
-	}
-]
+	]
+}

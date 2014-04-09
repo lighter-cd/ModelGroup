@@ -1,0 +1,57 @@
+{
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required": false,
+	"properties": {
+		"enums": {
+			"type": "array",
+			"id": "http://jsonschema.net/enums",
+			"required": true,
+			"items": {
+				"type": "object",
+				"id": "http://jsonschema.net/enums/0",
+				"required": true,
+				"properties": {
+					"alias": {
+						"type": "string",
+						"id": "http://jsonschema.net/enums/0/alias",
+						"required": true
+					},
+					"item": {
+						"type": "array",
+						"id": "http://jsonschema.net/enums/0/item",
+						"required": true,
+						"items": {
+							"type": "object",
+							"id": "http://jsonschema.net/enums/0/item/0",
+							"required": true,
+							"properties": {
+								"ID": {
+									"type": "number",
+									"id": "http://jsonschema.net/enums/0/item/0/ID",
+									"required": true
+								},
+								"alias": {
+									"type": "string",
+									"id": "http://jsonschema.net/enums/0/item/0/alias",
+									"required": true
+								},
+								"name": {
+									"type": "string",
+									"id": "http://jsonschema.net/enums/0/item/0/name",
+									"required": true
+								}
+							}
+						}
+					},
+					"name": {
+						"type": "string",
+						"id": "http://jsonschema.net/enums/0/name",
+						"required": true
+					}
+				}
+			}
+		}
+	}
+}

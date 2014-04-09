@@ -1,4 +1,8 @@
-[
+{
+	"components": [
+		"bone", "mesh", "anim", "figure", "nonormal", "ashook", "lod", "pixel", "texture", "camera", "light"
+	],
+	"resources": [
 		{
 			"name": "玩家",
 			"alias": "player",
@@ -7,196 +11,198 @@
 					"name": "裸体",
 					"alias": "body",
 					"file": "玩家/(职业)/(性别)/裸模.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 0,
-					"figure": 0,
-					"nonormal": 0,
-					"ashook": 0,
-					"lod": 0
+					"components": [
+						"bone", "mesh"
+					]
 				}, {
 					"name": "头发",
 					"alias": "hair",
 					"file": "玩家/(职业)/(性别)/头发/(头发).xmdl",
-					"bone": 1,
-					"mesh": 1
+					"components": [
+						"bone", "mesh"
+					]
 				}, {
 					"name": "脑袋",
 					"alias": "head",
 					"file": "玩家/五官/(性别)/(脑袋).xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1
+					"components": [
+						"bone", "mesh", "anim"
+					]
 				}, {
 					"name": "防具",
-					"alias": "",
+					"alias": "armor",
 					"file": "玩家/(职业)/(性别)/装备/(防具部位)_(防具).xmdl",
-					"mesh": 1
+					"components": [
+						"mesh"
+					]
 				}, {
 					"name": "武器",
-					"alias": "",
+					"alias": "weapon",
 					"file": "玩家/(职业)/武器/(武器).xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "ashook"
+					]
 				}, {
 					"name": "空手动作",
-					"alias": "",
+					"alias": "empty_action",
 					"file": "玩家/(职业)/(性别)/动作/普通/空手(玩家动作).xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "空手特效",
-					"alias": "",
+					"alias": "empty_effect",
 					"file": "玩家/(职业)/(性别)/动作/普通/空手(玩家动作)_eff.xmdl",
-					"bone": 1,
-					"anim": 1,
-					"mesh": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "武器动作",
-					"alias": "",
+					"alias": "weapon_action",
 					"file": "玩家/(职业)/(性别)/动作/普通/武器(玩家动作).xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "武器特效",
-					"alias": "",
+					"alias": "weapon_effect",
 					"file": "玩家/(职业)/(性别)/动作/普通/武器(玩家动作)_eff.xmdl",
-					"bone": 1,
-					"anim": 1,
-					"mesh": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "通用动作",
-					"alias": "",
+					"alias": "normal_action",
 					"file": "玩家/(职业)/(性别)/动作/普通/(通用动作).xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "通用特效",
-					"alias": "",
+					"alias": "normal_effect",
 					"file": "玩家/(职业)/(性别)/动作/普通/(通用动作)_eff.xmdl",
-					"bone": 1,
-					"anim": 1,
-					"mesh": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "表情动作",
-					"alias": "",
+					"alias": "emote_action",
 					"file": "玩家/(职业)/(性别)/动作/表情/(表情动作).xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "表情特效",
-					"alias": "",
+					"alias": "emote_effect",
 					"file": "玩家/(职业)/(性别)/动作/表情/(表情动作)_eff.xmdl",
-					"bone": 1,
-					"anim": 1,
-					"mesh": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "技能吟唱动作",
-					"alias": "",
+					"alias": "skillSing_action",
 					"file": "玩家/(职业)/(性别)/动作/技能/(技能)吟唱.xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "技能吟唱特效",
-					"alias": "",
+					"alias": "skillSing_effect",
 					"file": "玩家/(职业)/技能特效/(技能)吟唱_eff.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "技能施放动作",
-					"alias": "",
+					"alias": "skillCast_action",
 					"file": "玩家/(职业)/(性别)/动作/技能/(技能).xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "技能施放特效",
-					"alias": "",
+					"alias": "skillCast_effect",
 					"file": "玩家/(职业)/技能特效/(技能)_eff.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "法宝",
-					"alias": "",
+					"alias": "fabao",
 					"file": "玩家/法宝/(法宝).xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "选人动作",
-					"alias": "",
+					"alias": "select_action",
 					"file": "玩家/(职业)/(性别)/动作/选人/(选人动作).xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "选人特效",
-					"alias": "",
+					"alias": "select_effect",
 					"file": "玩家/(职业)/(性别)/动作/选人/(选人动作)_eff.xmdl",
-					"bone": 1,
-					"anim": 1,
-					"mesh": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "摄像机",
-					"alias": "",
+					"alias": "camera",
 					"file": "玩家/(性别)_(摄像机).xmdl",
-					"bone": 1,
-					"camera": 1,
-					"anim": 1
+					"components": [
+						"bone", "camera", "anim"
+					]
 				}, {
 					"name": "灯光",
-					"alias": "",
+					"alias": "light",
 					"file": "玩家/(灯光).xmdl",
-					"bone": 1,
-					"light": 1
+					"components": [
+						"bone", "light"
+					]
 				}, {
 					"name": "脑袋贴图",
 					"alias": "headt",
 					"file": "玩家/五官/(性别)/(脸贴图)",
-					"type": 1
+					"components": [
+						"texture"
+					]
 				}, {
 					"name": "阴影",
 					"alias": "shadow",
 					"file": "msc/影子_eff.xmdl",
-					"mesh": 1
+					"components": [
+						"mesh"
+					]
 				}, {
 					"name": "时装",
 					"alias": "",
 					"file": "玩家/时装/(性别)/(职业)_(时装).xmdl",
-					"mesh": 1
+					"components": [
+						"mesh"
+					]
 				}, {
 					"name": "法宝动作",
-					"alias": "",
+					"alias": "fabao_action",
 					"file": "玩家/(职业)/(性别)/动作/普通/法宝技能.xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "法宝特效",
-					"alias": "",
+					"alias": "fabao_effect",
 					"file": "玩家/(职业)/技能特效/(法宝特效)_eff.xmdl",
-					"bone": 1,
-					"anim": 1,
-					"mesh": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "装备特效",
-					"alias": "",
+					"alias": "equip_effect",
 					"file": "装备特效/(性别)/(装备特效)_(装备等级).xmdl",
-					"bone": 1,
-					"anim": 1,
-					"mesh": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}
 			]
 		}, {
@@ -205,70 +211,67 @@
 			"type": [
 				{
 					"name": "模型",
-					"alias": "",
+					"alias": "model",
 					"file": "NPC/(NPC)/模型.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 0,
-					"figure": 0,
-					"nonormal": 0,
-					"ashook": 0,
-					"lod": 0
+					"components": [
+						"bone", "mesh"
+					]
 				}, {
 					"name": "普通动作",
-					"alias": "",
+					"alias": "normal_action",
 					"file": "NPC/(NPC)/(NPC动作).xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "动作特效",
-					"alias": "",
+					"alias": "normal_effect",
 					"file": "NPC/(NPC)/(NPC动作)_eff.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "技能动作",
-					"alias": "",
+					"alias": "skill_action",
 					"file": "NPC/(NPC)/(技能).xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "技能特效",
-					"alias": "",
+					"alias": "skill_effect",
 					"file": "NPC/(NPC)/(技能)_eff.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "任务标记",
-					"alias": "",
+					"alias": "question_flag",
 					"file": "NPC/(任务标记).xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "阴影",
 					"alias": "shadow",
 					"file": "msc/影子_eff.xmdl",
-					"mesh": 1
+					"components": [
+						"mesh"
+					]
 				}, {
 					"name": "范围",
 					"alias": "range",
 					"file": "NPC/范围_(范围).xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal"
+					]
 				}, {
 					"name": "NPC贴图",
-					"alias": "",
+					"alias": "texture",
 					"file": "NPC/(NPC)/(贴图)",
-					"type": 1
+					"components": [
+						"texture"
+					]
 				}
 			]
 		}, {
@@ -277,16 +280,11 @@
 			"type": [
 				{
 					"name": "效果",
-					"alias": "",
+					"alias": "effect",
 					"file": "技能/(技能)_(技能阶段).xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"figure": 0,
-					"nonormal": 1,
-					"ashook": 1,
-					"lod": 0,
-					"pixel": 0
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}
 			]
 		}, {
@@ -297,29 +295,23 @@
 					"name": "角色通用",
 					"alias": "levelup",
 					"file": "msc/(通用特效).xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "点击",
 					"alias": "clickground",
 					"file": "msc/点击.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 0
+					"components": [
+						"bone", "mesh", "anim", "nonormal"
+					]
 				}, {
 					"name": "骑乘出现",
 					"alias": "ride",
 					"file": "msc/骑乘出现.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}
 			]
 		}, {
@@ -328,34 +320,32 @@
 			"type": [
 				{
 					"name": "模型",
-					"alias": "",
+					"alias": "model",
 					"file": "坐骑/(坐骑)/模型.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 0,
-					"figure": 0,
-					"nonormal": 0,
-					"ashook": 0,
-					"lod": 0
+					"components": [
+						"bone", "mesh"
+					]
 				}, {
 					"name": "普通动作",
-					"alias": "",
+					"alias": "normal_action",
 					"file": "坐骑/(坐骑)/(坐骑动作).xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "动作特效",
-					"alias": "",
+					"alias": "normal_effect",
 					"file": "坐骑/(坐骑)/(坐骑动作)_eff.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "坐骑贴图",
-					"alias": "",
+					"alias": "texture",
 					"file": "坐骑/(坐骑)/坐骑(贴图)",
-					"type": 1
+					"components": [
+						"texture"
+					]
 				}
 			]
 		}, {
@@ -364,51 +354,48 @@
 			"type": [
 				{
 					"name": "模型",
-					"alias": "",
+					"alias": "model",
 					"file": "宠物/(宠物)/模型.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 0,
-					"figure": 0,
-					"nonormal": 0,
-					"ashook": 0,
-					"lod": 0
+					"components": [
+						"bone", "mesh"
+					]
 				}, {
 					"name": "普通动作",
-					"alias": "",
+					"alias": "normal_action",
 					"file": "宠物/(宠物)/(宠物动作).xmdl",
-					"anim": 1
+					"components": [
+						"anim"
+					]
 				}, {
 					"name": "宠物特效",
-					"alias": "",
+					"alias": "effect",
 					"file": "宠物/(宠物特效).xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "动作特效",
-					"alias": "",
+					"alias": "normal_effect",
 					"file": "宠物/(宠物动作)_(动作特效)_eff.xmdl",
-					"bone": 1,
-					"mesh": 1,
-					"anim": 1,
-					"nonormal": 1,
-					"ashook": 1
+					"components": [
+						"bone", "mesh", "anim", "nonormal", "ashook"
+					]
 				}, {
 					"name": "宠物贴图",
-					"alias": "",
+					"alias": "texture",
 					"file": "宠物/(宠物)/宠物(贴图)",
-					"type": 1
+					"components": [
+						"texture"
+					]
 				}, {
 					"name": "摄像机",
-					"alias": "",
+					"alias": "camera",
 					"file": "宠物/(宠物)_(摄像机).xmdl",
-					"bone": 1,
-					"camera": 1,
-					"anim": 1
+					"components": [
+						"bone", "camera", "anim"
+					]
 				}
 			]
 		}
-]
+	]
+}

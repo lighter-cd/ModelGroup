@@ -2,6 +2,7 @@
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
     <classEntry path="modelGroup.config.PartType"/>
+    <classEntry path="modelGroup.config.ModelGroupConfigTest"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

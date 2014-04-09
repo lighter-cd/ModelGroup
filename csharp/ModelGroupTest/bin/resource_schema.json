@@ -1,0 +1,77 @@
+{
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required": true,
+	"properties": {
+		"components": {
+			"type": "array",
+			"id": "http://jsonschema.net/components",
+			"required": true,
+			"items": {
+				"type": "string",
+				"id": "http://jsonschema.net/components/0",
+				"required": true
+			}
+		},
+		"resources": {
+			"type": "array",
+			"id": "http://jsonschema.net/resources",
+			"required": true,
+			"items": {
+				"type": "object",
+				"id": "http://jsonschema.net/resources/0",
+				"required": true,
+				"properties": {
+					"alias": {
+						"type": "string",
+						"id": "http://jsonschema.net/resources/0/alias",
+						"required": true
+					},
+					"name": {
+						"type": "string",
+						"id": "http://jsonschema.net/resources/0/name",
+						"required": true
+					},
+					"type": {
+						"type": "array",
+						"id": "http://jsonschema.net/resources/0/type",
+						"required": true,
+						"items": {
+							"type": "object",
+							"id": "http://jsonschema.net/resources/0/type/0",
+							"required": true,
+							"properties": {
+								"alias": {
+									"type": "string",
+									"id": "http://jsonschema.net/resources/0/type/0/alias",
+									"required": true
+								},
+								"components": {
+									"type": "array",
+									"id": "http://jsonschema.net/resources/0/type/0/components",
+									"required": true,
+									"items": {
+										"type": "string",
+										"id": "http://jsonschema.net/resources/0/type/0/components/0",
+										"required": true
+									}
+								},
+								"file": {
+									"type": "string",
+									"id": "http://jsonschema.net/resources/0/type/0/file",
+									"required": true
+								},
+								"name": {
+									"type": "string",
+									"id": "http://jsonschema.net/resources/0/type/0/name",
+									"required": true
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

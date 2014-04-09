@@ -1,0 +1,62 @@
+{
+	"flags": [
+		"bbox", "pick", "castshadow", "shadowdecal", "hidden", "asyncLoad", "sound"
+	],
+	"groups": [
+		{
+			"name": "玩家",
+			"alias": "player",
+			"global_params": [
+				"职业", "性别"
+			],
+			"channels": [
+				{
+					"name": "裸体",
+					"alias": "body",
+					"target": "",
+					"type": -1,
+					"attach_to": -1,
+					"attach_bone": "",
+					"dims": 1,
+					"flags": [
+						"bbox", "pick", "castshadow"
+					],
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "裸体"
+						}
+					]
+				}
+			],
+			"textures": [
+				{
+					"name": "脑袋",
+					"alias": "header_texture",
+					"target": "脑袋",
+					"type": -1,
+					"attach_to": -1,
+					"attach_bone": "脑袋",
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "脑袋贴图"
+						}
+					]
+				}
+			],
+			"colors": [
+				{
+					"name": "法宝颜色",
+					"alias": "talisman_texture",
+					"target": [
+						{
+							"channel": "法宝",
+							"element": ""
+						}
+					]
+				}
+			]
+		}
+	]
+}
