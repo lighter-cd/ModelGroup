@@ -34,7 +34,7 @@ namespace ModelGroupTest
     {
         public string name { get; set; }
         public string alias { get; set; }
-        public List<ColorTarget> source { get; set; }
+        public List<ColorTarget> target { get; set; }
     }
     class ModelGroup
     {
@@ -84,6 +84,18 @@ namespace ModelGroupTest
             return false;
         }
 
+        private bool hasModelChannel(string target, ModelGroup group)
+        {
+            foreach(channel c in group.channels)
+            {
+                if (c.name == target)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private void validFlags(string group, string c, IList<string> flags, IList<string> messages)
         {
             foreach (string flag in flags)
@@ -91,6 +103,17 @@ namespace ModelGroupTest
                 if (!flagSets.Contains(flag))
                 {
                     messages.Add("模型组 " + group + " 频道 " + c + " 标记 " + flag + " 不在定义内");
+                }
+            }
+        }
+
+        private void validColorTarget(ModelGroup group, string c, IList<ColorTarget> targets, IList<string> messages)
+        {
+            foreach (ColorTarget t in targets)
+            {
+                if(!hasModelChannel(t.channel,group))
+                {
+                    messages.Add("模型组 " + group.name + " 颜色频道 " + c + "的目标" + t.channel + "不存在");
                 }
             }
         }
@@ -175,11 +198,71 @@ namespace ModelGroupTest
                 }
                 aliasSets.Add(c.alias);
 
+                // 目标频道必须存在。或者为空
+                if(c.target != null && c.target.Length > 0){
+                    if (!hasModelChannel(c.target, group))
+                    {
+                        messages.Add("模型组 " + group.name + " 频道 " + c.name + " 的目标频道 " + c.target + " 不存在");
+                    }
+                }
+                
                 validSource(group.name, c.name, c.source, messages);
 
                 if (c.flags != null)
                 {
                     validFlags(group.name, c.name, c.flags, messages);
+                }
+            }
+
+            if (group.textures != null)
+            {
+                nameSets.Clear();
+                aliasSets.Clear();
+                foreach (channel c in group.textures)
+                {
+                    if (nameSets.Contains(c.name))
+                    {
+                        messages.Add("模型组 " + group.name + " 纹理频道 " + c.name + "已经存在");
+                    }
+                    nameSets.Add(c.name);
+
+                    if (System.Text.RegularExpressions.Regex.IsMatch(c.alias, @"[\u4e00-\u9fa5]"))
+                    {
+                        messages.Add("模型组 " + group.name + " 纹理频道 " + c.name + " 别名 " + c.alias + " 不能包含汉字");
+                    }
+                    if (aliasSets.Contains(c.alias))
+                    {
+                        messages.Add("模型组 " + group.name + " 纹理频道 " + c.name + " 别名 " + c.alias + " 已经存在");
+                    }
+                    aliasSets.Add(c.alias);
+
+                    validSource(group.name, c.name, c.source, messages);
+                }
+            }
+
+            if (group.colors != null)
+            {
+                nameSets.Clear();
+                aliasSets.Clear();
+                foreach (ColorChannel c in group.colors)
+                {
+                    if (nameSets.Contains(c.name))
+                    {
+                        messages.Add("模型组 " + group.name + " 颜色频道 " + c.name + "已经存在");
+                    }
+                    nameSets.Add(c.name);
+
+                    if (System.Text.RegularExpressions.Regex.IsMatch(c.alias, @"[\u4e00-\u9fa5]"))
+                    {
+                        messages.Add("模型组 " + group.name + " 颜色频道 " + c.name + " 别名 " + c.alias + " 不能包含汉字");
+                    }
+                    if (aliasSets.Contains(c.alias))
+                    {
+                        messages.Add("模型组 " + group.name + " 颜色频道 " + c.name + " 别名 " + c.alias + " 已经存在");
+                    }
+                    aliasSets.Add(c.alias);
+
+                    validColorTarget(group, c.name, c.target, messages);
                 }
             }
         }

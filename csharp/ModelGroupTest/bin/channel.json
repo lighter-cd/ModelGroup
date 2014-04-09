@@ -57,7 +57,7 @@
 					]
 				}, {
 					"name": "头盔",
-					"alias": "",
+					"alias": "cap",
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 2,
@@ -74,7 +74,7 @@
 					]
 				}, {
 					"name": "护肩",
-					"alias": "",
+					"alias": "shoulder",
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 3,
@@ -91,7 +91,7 @@
 					]
 				}, {
 					"name": "衣服",
-					"alias": "",
+					"alias": "cloth",
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 4,
@@ -108,7 +108,7 @@
 					]
 				}, {
 					"name": "裤子",
-					"alias": "",
+					"alias": "trousers",
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 5,
@@ -125,7 +125,7 @@
 					]
 				}, {
 					"name": "腰带",
-					"alias": "",
+					"alias": "belt",
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 6,
@@ -142,7 +142,7 @@
 					]
 				}, {
 					"name": "手套",
-					"alias": "",
+					"alias": "gloves",
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 7,
@@ -159,7 +159,7 @@
 					]
 				}, {
 					"name": "手腕",
-					"alias": "",
+					"alias": "wrister",
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 8,
@@ -176,7 +176,7 @@
 					]
 				}, {
 					"name": "鞋子",
-					"alias": "",
+					"alias": "shoes",
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 9,
@@ -193,7 +193,7 @@
 					]
 				}, {
 					"name": "披风",
-					"alias": "",
+					"alias": "cloak",
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 10,
@@ -210,7 +210,7 @@
 					]
 				}, {
 					"name": "武器",
-					"alias": "",
+					"alias": "weapon",
 					"target": "裸体",
 					"type": 6,
 					"attach_to": 1,
@@ -225,7 +225,7 @@
 					]
 				}, {
 					"name": "法宝",
-					"alias": "",
+					"alias": "fabao",
 					"target": "裸体",
 					"type": 6,
 					"attach_to": 2,
@@ -240,7 +240,7 @@
 					]
 				}, {
 					"name": "动作",
-					"alias": "",
+					"alias": "action",
 					"target": "裸体",
 					"type": 3,
 					"attach_to": 0,
@@ -276,7 +276,7 @@
 					]
 				}, {
 					"name": "动作特效1",
-					"alias": "",
+					"alias": "action1_effect",
 					"target": "裸体",
 					"type": 6,
 					"attach_to": 3,
@@ -306,7 +306,7 @@
 					]
 				}, {
 					"name": "动作特效2",
-					"alias": "",
+					"alias": "action2_effect",
 					"target": "裸体",
 					"type": 6,
 					"attach_to": 4,
@@ -324,7 +324,7 @@
 					]
 				}, {
 					"name": "被击特效",
-					"alias": "",
+					"alias": "behit_effect",
 					"target": "裸体",
 					"type": 6,
 					"attach_to": 5,
@@ -347,7 +347,7 @@
 					]
 				}, {
 					"name": "技能BUF",
-					"alias": "",
+					"alias": "buffs",
 					"target": "裸体",
 					"type": 6,
 					"attach_to": 40,
@@ -370,7 +370,7 @@
 					]
 				}, {
 					"name": "摄像机",
-					"alias": "",
+					"alias": "camera",
 					"target": "裸体",
 					"type": 0,
 					"source": [
@@ -381,7 +381,7 @@
 					]
 				}, {
 					"name": "夜晚灯光",
-					"alias": "",
+					"alias": "night_light",
 					"target": "裸体",
 					"type": 0,
 					"source": [
@@ -392,7 +392,7 @@
 					]
 				}, {
 					"name": "通用特效",
-					"alias": "",
+					"alias": "normal_effect",
 					"target": "裸体",
 					"type": 6,
 					"attach_to": 72,
@@ -421,7 +421,7 @@
 					]
 				}, {
 					"name": "时装",
-					"alias": "",
+					"alias": "dress",
 					"target": "裸体",
 					"type": 2,
 					"attach_to": 11,
@@ -436,7 +436,7 @@
 					]
 				}, {
 					"name": "装备特效",
-					"alias": "",
+					"alias": "equip_effect",
 					"target": "裸体",
 					"type": 6,
 					"attach_to": 6,
@@ -500,7 +500,7 @@
 					]
 				}, {
 					"name": "动作",
-					"alias": "",
+					"alias": "action",
 					"target": "模型",
 					"type": 3,
 					"attach_to": 0,
@@ -518,7 +518,7 @@
 					]
 				}, {
 					"name": "动作特效",
-					"alias": "",
+					"alias": "action_effect",
 					"target": "模型",
 					"type": 6,
 					"attach_to": 1,
@@ -533,7 +533,7 @@
 					]
 				}, {
 					"name": "技能特效",
-					"alias": "",
+					"alias": "skill_effect",
 					"target": "模型",
 					"type": 6,
 					"attach_to": 2,
@@ -548,7 +548,7 @@
 					]
 				}, {
 					"name": "被击特效",
-					"alias": "",
+					"alias": "behit_effect",
 					"target": "模型",
 					"type": 6,
 					"attach_to": 8,
@@ -571,7 +571,7 @@
 					]
 				}, {
 					"name": "技能BUF",
-					"alias": "",
+					"alias": "buffs",
 					"target": "模型",
 					"type": 6,
 					"attach_to": 40,
@@ -594,7 +594,7 @@
 					]
 				}, {
 					"name": "任务标记",
-					"alias": "",
+					"alias": "question_flag",
 					"target": "模型",
 					"type": 1,
 					"attach_bone": "任务Dummy",
@@ -606,7 +606,7 @@
 					]
 				}, {
 					"name": "通用特效",
-					"alias": "",
+					"alias": "normal_effect",
 					"target": "模型",
 					"type": 6,
 					"attach_to": 72,
@@ -713,7 +713,7 @@
 					]
 				}, {
 					"name": "动作",
-					"alias": "",
+					"alias": "action",
 					"target": "模型",
 					"type": 3,
 					"attach_to": 0,
@@ -728,7 +728,7 @@
 					]
 				}, {
 					"name": "动作特效",
-					"alias": "",
+					"alias": "effect",
 					"target": "模型",
 					"type": 6,
 					"attach_to": 1,
@@ -782,7 +782,7 @@
 					]
 				}, {
 					"name": "动作",
-					"alias": "",
+					"alias": "action",
 					"target": "模型",
 					"type": 3,
 					"attach_to": 0,
@@ -797,7 +797,7 @@
 					]
 				}, {
 					"name": "宠物特效",
-					"alias": "",
+					"alias": "pet_effect",
 					"target": "模型",
 					"type": 6,
 					"attach_to": 72,
@@ -810,7 +810,7 @@
 					]
 				}, {
 					"name": "动作特效",
-					"alias": "",
+					"alias": "action_effect",
 					"target": "模型",
 					"type": 6,
 					"attach_to": 1,
@@ -825,7 +825,7 @@
 					]
 				}, {
 					"name": "摄像机",
-					"alias": "",
+					"alias": "camera",
 					"target": "",
 					"type": 0,
 					"source": [
