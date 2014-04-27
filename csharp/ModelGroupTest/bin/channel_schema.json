@@ -11,31 +11,33 @@
 			"items": {
 				"type": "string",
 				"id": "http://jsonschema.net/flags/0",
-				"required": false
+				"required": true
 			}
 		},
 		"groups": {
 			"type": "array",
 			"id": "http://jsonschema.net/groups",
-			"required": false,
+			"required": true,
+			"minItems": 1,
 			"items": {
 				"type": "object",
 				"id": "http://jsonschema.net/groups/0",
-				"required": false,
+				"required": true,
 				"properties": {
 					"alias": {
 						"type": "string",
 						"id": "http://jsonschema.net/groups/0/alias",
-						"required": false
+						"required": true
 					},
 					"channels": {
 						"type": "array",
 						"id": "http://jsonschema.net/groups/0/channels",
-						"required": false,
+						"required": true,
+						"minItems": 1,
 						"items": {
 							"type": "object",
 							"id": "http://jsonschema.net/groups/0/channels/0",
-							"required": false,
+							"required": true,
 							"properties": {
 								"alias": {
 									"type": "string",
@@ -154,17 +156,17 @@
 					"global_params": {
 						"type": "array",
 						"id": "http://jsonschema.net/groups/0/global_params",
-						"required": false,
+						"required": true,
 						"items": {
 							"type": "string",
 							"id": "http://jsonschema.net/groups/0/global_params/0",
-							"required": false
+							"required": true
 						}
 					},
 					"name": {
 						"type": "string",
 						"id": "http://jsonschema.net/groups/0/name",
-						"required": false
+						"required": true
 					},
 					"textures": {
 						"type": "array",

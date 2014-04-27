@@ -1,0 +1,13 @@
+{
+	"flags":[],
+	"groups": [
+	{
+			"name": "玩家",
+			"alias": "player",
+			"global_params": [
+			],
+			"channels": [
+			]
+	}
+	]
+}

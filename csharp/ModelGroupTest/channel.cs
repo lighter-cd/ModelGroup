@@ -283,15 +283,24 @@ namespace ModelGroupTest
             }
 
             flagSets = new HashSet<string>();
-            foreach (string flag in channels.flags)
+
+            if (channels.flags != null)
             {
-                if (flagSets.Contains(flag))
+                foreach (string flag in channels.flags)
                 {
-                    messages.Add("flag " + flag + " 已经存在");
+                    if (flagSets.Contains(flag))
+                    {
+                        messages.Add("flag " + flag + " 已经存在");
+                    }
+                    flagSets.Add(flag);
                 }
-                flagSets.Add(flag);
             }
 
+            if(channels.groups.Count == 0)
+            {
+                messages.Add("模型组数量不能为0");
+            }
+            
             HashSet<string> nameSets = new HashSet<string>();
             HashSet<string> aliasSets = new HashSet<string>();
             foreach (ModelGroup group in channels.groups)
@@ -312,7 +321,14 @@ namespace ModelGroupTest
                 }
                 aliasSets.Add(group.alias);
 
-                validGroup(group, messages);
+                if (group.channels.Count == 0)
+                {
+                    messages.Add("模型组 " + group.name + " 频道数量不能为0");
+                }
+                else
+                {
+                    validGroup(group, messages);
+                }
             }
 
             return messages.Count == 0;

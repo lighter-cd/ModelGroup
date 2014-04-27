@@ -13,15 +13,20 @@ namespace ModelGroupTest
 		{
             try
             {
-                string strPath = System.Environment.CurrentDirectory;
+                CommandArgs commandArg = CommandLine.Parse(args);
+                Dictionary<string, string> argPairs = commandArg.ArgPairs;
+                string strPath = argPairs.ContainsKey("path")?argPairs["path"]:System.Environment.CurrentDirectory;
+                string strEnumPath = argPairs.ContainsKey("enum") ? argPairs["enum"] : "enum.json";
+                string strResPath = argPairs.ContainsKey("resource") ? argPairs["resource"] : "resource.json";
+                string strChannelPath = argPairs.ContainsKey("channel") ? argPairs["channel"] : "channel.json";
 
                 string strEnumSchema = System.IO.File.ReadAllText(strPath + @"\enum_schema.json");
                 string strResSchema = System.IO.File.ReadAllText(strPath + @"\resource_schema.json");
                 string strChannelSchema = System.IO.File.ReadAllText(strPath + @"\channel_schema.json");
 
-                string strEnum = System.IO.File.ReadAllText(strPath + @"\enum.json");
-                string strRes = System.IO.File.ReadAllText(strPath + @"\resource.json");
-                string strChannel = System.IO.File.ReadAllText(strPath + @"\channel.json");
+                string strEnum = System.IO.File.ReadAllText(strPath + @"\" + strEnumPath);
+                string strRes = System.IO.File.ReadAllText(strPath + @"\" + strResPath);
+                string strChannel = System.IO.File.ReadAllText(strPath + @"\" + strChannelPath);
 
                 JsonSchema schemaEnum = JsonSchema.Parse(strEnumSchema);
                 JsonSchema schemaResource = JsonSchema.Parse(strResSchema);
@@ -79,8 +84,9 @@ namespace ModelGroupTest
                     return;
                 }
 
+                Console.WriteLine("Valid successed");
 
-                ModelGroupConfig.Instance.LoadConfig(strEnum, strRes, strChannel, strPath);
+                //ModelGroupConfig.Instance.LoadConfig(strEnum, strRes, strChannel, strPath);
             }
             catch(Exception e)
             {

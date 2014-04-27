@@ -34,6 +34,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="channel.cs" />
+    <Compile Include="CommandArgs.cs" />
+    <Compile Include="CommandLine.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
