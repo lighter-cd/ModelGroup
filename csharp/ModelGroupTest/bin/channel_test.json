@@ -1,5 +1,5 @@
 {
-	"flags":[],
+	"flags":["bbox", "pick", "castshadow", "shadowdecal", "hidden", "asyncLoad", "sound"],
 	"groups": [
 	{
 			"name": "玩家",
@@ -7,6 +7,21 @@
 			"global_params": [
 			],
 			"channels": [
+			{
+					"name": "裸体",
+					"alias": "body",
+					"type": 1,
+					"attach_to": "head",
+					"flags": [
+						"bbox", "pick", "castshadow"
+					],
+					"source": [
+						{
+							"group": "玩家",
+							"enum": "裸体"
+						}
+					]					
+			}
 			]
 	}
 	]

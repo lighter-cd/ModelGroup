@@ -42,15 +42,10 @@
 								"alias": {
 									"type": "string",
 									"id": "http://jsonschema.net/groups/0/channels/0/alias",
-									"required": false
-								},
-								"attach_bone": {
-									"type": "string",
-									"id": "http://jsonschema.net/groups/0/channels/0/attach_bone",
-									"required": false
+									"required": true
 								},
 								"attach_to": {
-									"type": "number",
+									"type": "string",
 									"id": "http://jsonschema.net/groups/0/channels/0/attach_to",
 									"required": false
 								},
@@ -63,36 +58,48 @@
 									"type": "array",
 									"id": "http://jsonschema.net/groups/0/channels/0/flags",
 									"required": false,
+									"minItems": 1,
 									"items": {
 										"type": "string",
 										"id": "http://jsonschema.net/groups/0/channels/0/flags/0",
-										"required": false
+										"required": true
 									}
 								},
 								"name": {
 									"type": "string",
 									"id": "http://jsonschema.net/groups/0/channels/0/name",
-									"required": false
+									"required": true
 								},
 								"source": {
 									"type": "array",
 									"id": "http://jsonschema.net/groups/0/channels/0/source",
-									"required": false,
+									"required": true,
+									"minItems": 1,
 									"items": {
 										"type": "object",
 										"id": "http://jsonschema.net/groups/0/channels/0/source/0",
-										"required": false,
+										"required": true,
 										"properties": {
 											"enum": {
 												"type": "string",
 												"id": "http://jsonschema.net/groups/0/channels/0/source/0/enum",
-												"required": false
+												"required": true
 											},
 											"group": {
 												"type": "string",
 												"id": "http://jsonschema.net/groups/0/channels/0/source/0/group",
+												"required": true
+											},
+											"filter": {
+												"type": "string",
+												"id": "http://jsonschema.net/groups/0/channels/0/source/0/filter",
 												"required": false
-											}
+											},
+											"value": {
+												"type": "integer",
+												"id": "http://jsonschema.net/groups/0/channels/0/source/0/value",
+												"required": false
+											}											
 										}
 									}
 								},
@@ -102,7 +109,7 @@
 									"required": false
 								},
 								"type": {
-									"type": "number",
+									"type": "integer",
 									"id": "http://jsonschema.net/groups/0/channels/0/type",
 									"required": false
 								}
@@ -182,13 +189,8 @@
 									"id": "http://jsonschema.net/groups/0/textures/0/alias",
 									"required": false
 								},
-								"attach_bone": {
-									"type": "string",
-									"id": "http://jsonschema.net/groups/0/textures/0/attach_bone",
-									"required": false
-								},
 								"attach_to": {
-									"type": "number",
+									"type": "string",
 									"id": "http://jsonschema.net/groups/0/textures/0/attach_to",
 									"required": false
 								},
@@ -225,7 +227,7 @@
 									"required": false
 								},
 								"type": {
-									"type": "number",
+									"type": "integer",
 									"id": "http://jsonschema.net/groups/0/textures/0/type",
 									"required": false
 								}

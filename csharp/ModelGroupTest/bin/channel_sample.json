@@ -14,10 +14,9 @@
 					"name": "裸体",
 					"alias": "body",
 					"target": "",
-					"type": -1,
-					"attach_to": -1,
-					"attach_bone": "",
 					"dims": 1,
+					"type": -1,
+					"attach_to": "",
 					"flags": [
 						"bbox", "pick", "castshadow"
 					],
@@ -35,8 +34,7 @@
 					"alias": "header_texture",
 					"target": "脑袋",
 					"type": -1,
-					"attach_to": -1,
-					"attach_bone": "脑袋",
+					"attach_to": "脑袋",
 					"source": [
 						{
 							"group": "玩家",

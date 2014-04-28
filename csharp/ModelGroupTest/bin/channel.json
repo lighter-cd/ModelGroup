@@ -15,7 +15,6 @@
 					"alias": "body",
 					"target": "",
 					"type": -1,
-					"attach_to": -1,
 					"flags": [
 						"bbox", "pick", "castshadow"
 					],
@@ -30,7 +29,7 @@
 					"alias": "head",
 					"target": "裸体",
 					"type": 1,
-					"attach_bone": "Dummy头部对位",
+					"attach_to": "Dummy头部对位",
 					"flags": [
 						"bbox", "pick", "castshadow"
 					],
@@ -45,7 +44,6 @@
 					"alias": "hair",
 					"target": "裸体",
 					"type": 2,
-					"attach_to": 1,
 					"flags": [
 						"bbox", "pick", "castshadow"
 					],
@@ -60,7 +58,6 @@
 					"alias": "cap",
 					"target": "裸体",
 					"type": 2,
-					"attach_to": 2,
 					"flags": [
 						"bbox", "pick", "castshadow", "hidden"
 					],
@@ -77,7 +74,6 @@
 					"alias": "shoulder",
 					"target": "裸体",
 					"type": 2,
-					"attach_to": 3,
 					"flags": [
 						"bbox", "pick", "castshadow", "hidden"
 					],
@@ -94,7 +90,6 @@
 					"alias": "cloth",
 					"target": "裸体",
 					"type": 2,
-					"attach_to": 4,
 					"flags": [
 						"bbox", "pick", "castshadow", "hidden"
 					],
@@ -111,7 +106,6 @@
 					"alias": "trousers",
 					"target": "裸体",
 					"type": 2,
-					"attach_to": 5,
 					"flags": [
 						"bbox", "pick", "castshadow", "hidden"
 					],
@@ -128,7 +122,6 @@
 					"alias": "belt",
 					"target": "裸体",
 					"type": 2,
-					"attach_to": 6,
 					"flags": [
 						"bbox", "pick", "castshadow", "hidden"
 					],
@@ -145,7 +138,6 @@
 					"alias": "gloves",
 					"target": "裸体",
 					"type": 2,
-					"attach_to": 7,
 					"flags": [
 						"bbox", "pick", "castshadow", "hidden"
 					],
@@ -162,7 +154,6 @@
 					"alias": "wrister",
 					"target": "裸体",
 					"type": 2,
-					"attach_to": 8,
 					"flags": [
 						"bbox", "pick", "castshadow", "hidden"
 					],
@@ -179,7 +170,6 @@
 					"alias": "shoes",
 					"target": "裸体",
 					"type": 2,
-					"attach_to": 9,
 					"flags": [
 						"bbox", "pick", "castshadow", "hidden"
 					],
@@ -196,7 +186,6 @@
 					"alias": "cloak",
 					"target": "裸体",
 					"type": 2,
-					"attach_to": 10,
 					"flags": [
 						"bbox", "pick", "castshadow", "hidden"
 					],
@@ -213,7 +202,6 @@
 					"alias": "weapon",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": 1,
 					"flags": [
 						"bbox", "pick", "castshadow", "asyncLoad"
 					],
@@ -228,7 +216,6 @@
 					"alias": "fabao",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": 2,
 					"flags": [
 						"asyncLoad"
 					],
@@ -243,7 +230,6 @@
 					"alias": "action",
 					"target": "裸体",
 					"type": 3,
-					"attach_to": 0,
 					"flags": [
 						"sound"
 					],
@@ -279,7 +265,6 @@
 					"alias": "action1_effect",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": 3,
 					"flags": [
 						"sound"
 					],
@@ -309,7 +294,6 @@
 					"alias": "action2_effect",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": 4,
 					"flags": [
 						"sound"
 					],
@@ -327,7 +311,6 @@
 					"alias": "behit_effect",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": 5,
 					"dims": 32,
 					"flags": [
 						"sound", "asyncLoad"
@@ -350,7 +333,6 @@
 					"alias": "buffs",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": 40,
 					"dims": 32,
 					"flags": [
 						"sound", "asyncLoad"
@@ -395,7 +377,6 @@
 					"alias": "normal_effect",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": 72,
 					"dims": 8,
 					"source": [
 						{
@@ -408,7 +389,7 @@
 					"alias": "shadow",
 					"target": "裸体",
 					"type": 1,
-					"attach_bone": "Bip01",
+					"attach_to": "Bip01",
 					"dims": 1,
 					"flags": [
 						"bbox", "shadowdecal"
@@ -424,7 +405,6 @@
 					"alias": "dress",
 					"target": "裸体",
 					"type": 2,
-					"attach_to": 11,
 					"flags": [
 						"bbox", "pick", "castshadow", "hidden"
 					],
@@ -439,7 +419,6 @@
 					"alias": "equip_effect",
 					"target": "裸体",
 					"type": 6,
-					"attach_to": 6,
 					"dims": 8,
 					"source": [
 						{
@@ -455,7 +434,7 @@
 					"alias": "header_texture",
 					"target": "脑袋",
 					"type": -1,
-					"attach_bone": "脑袋",
+					"attach_to": "脑袋",
 					"source": [
 						{
 							"group": "玩家",
@@ -488,7 +467,6 @@
 					"alias": "model",
 					"target": "",
 					"type": -1,
-					"attach_to": -1,
 					"flags": [
 						"bbox", "pick", "castshadow"
 					],
@@ -503,7 +481,6 @@
 					"alias": "action",
 					"target": "模型",
 					"type": 3,
-					"attach_to": 0,
 					"flags": [
 						"sound"
 					],
@@ -521,7 +498,6 @@
 					"alias": "action_effect",
 					"target": "模型",
 					"type": 6,
-					"attach_to": 1,
 					"flags": [
 						"sound"
 					],
@@ -536,7 +512,6 @@
 					"alias": "skill_effect",
 					"target": "模型",
 					"type": 6,
-					"attach_to": 2,
 					"flags": [
 						"sound"
 					],
@@ -551,7 +526,6 @@
 					"alias": "behit_effect",
 					"target": "模型",
 					"type": 6,
-					"attach_to": 8,
 					"dims": 32,
 					"flags": [
 						"sound"
@@ -574,7 +548,6 @@
 					"alias": "buffs",
 					"target": "模型",
 					"type": 6,
-					"attach_to": 40,
 					"dims": 32,
 					"flags": [
 						"sound"
@@ -597,7 +570,7 @@
 					"alias": "question_flag",
 					"target": "模型",
 					"type": 1,
-					"attach_bone": "任务Dummy",
+					"attach_to": "任务Dummy",
 					"source": [
 						{
 							"group": "NPC",
@@ -609,7 +582,6 @@
 					"alias": "normal_effect",
 					"target": "模型",
 					"type": 6,
-					"attach_to": 72,
 					"dims": 8,
 					"source": [
 						{
@@ -622,7 +594,7 @@
 					"alias": "shadow",
 					"target": "模型",
 					"type": 1,
-					"attach_bone": "Bip01",
+					"attach_to": "Bip01",
 					"dims": 1,
 					"flags": [
 						"bbox", "shadowdecal"
@@ -656,7 +628,7 @@
 					"alias": "texture",
 					"target": "模型",
 					"type": -1,
-					"attach_bone": "模型",
+					"attach_to": "模型",
 					"source": [
 						{
 							"group": "NPC",
@@ -677,7 +649,6 @@
 					"alias": "eff",
 					"target": "",
 					"type": -1,
-					"attach_to": -1,
 					"flags": [
 						"sound", "bbox"
 					],
@@ -701,7 +672,6 @@
 					"alias": "model",
 					"target": "",
 					"type": -1,
-					"attach_to": -1,
 					"flags": [
 						"bbox", "pick", "castshadow"
 					],
@@ -716,7 +686,6 @@
 					"alias": "action",
 					"target": "模型",
 					"type": 3,
-					"attach_to": 0,
 					"flags": [
 						"sound"
 					],
@@ -731,7 +700,6 @@
 					"alias": "effect",
 					"target": "模型",
 					"type": 6,
-					"attach_to": 1,
 					"flags": [
 						"sound"
 					],
@@ -749,7 +717,7 @@
 					"alias": "texture",
 					"target": "模型",
 					"type": -1,
-					"attach_bone": "",
+					"attach_to": "",
 					"source": [
 						{
 							"group": "坐骑",
@@ -770,7 +738,6 @@
 					"alias": "model",
 					"target": "",
 					"type": -1,
-					"attach_to": -1,
 					"flags": [
 						"bbox", "pick", "castshadow"
 					],
@@ -785,7 +752,6 @@
 					"alias": "action",
 					"target": "模型",
 					"type": 3,
-					"attach_to": 0,
 					"flags": [
 						"sound"
 					],
@@ -800,7 +766,6 @@
 					"alias": "pet_effect",
 					"target": "模型",
 					"type": 6,
-					"attach_to": 72,
 					"dims": 8,
 					"source": [
 						{
@@ -813,7 +778,6 @@
 					"alias": "action_effect",
 					"target": "模型",
 					"type": 6,
-					"attach_to": 1,
 					"flags": [
 						"sound"
 					],
@@ -842,7 +806,7 @@
 					"alias": "texture",
 					"target": "模型",
 					"type": -1,
-					"attach_bone": "",
+					"attach_to": "",
 					"source": [
 						{
 							"group": "宠物",

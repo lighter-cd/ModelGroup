@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
@@ -19,11 +20,16 @@ namespace ModelGroupTest
         public string name { get; set; }
         public string alias { get; set; }
         public string target { get; set; }
+        public int dims { get; set; }
         public int type { get; set; }
-        public int attach_to { get; set; }
-        public string attach_bone { get; set; }
+        public string attach_to { get; set; }
         public List<string> flags { get; set; }
         public List<Source> source { get; set; }
+
+        public channel()
+        {
+            dims = 1;
+        }
     }
     class ColorTarget
     {
@@ -204,6 +210,21 @@ namespace ModelGroupTest
                     {
                         messages.Add("模型组 " + group.name + " 频道 " + c.name + " 的目标频道 " + c.target + " 不存在");
                     }
+                }
+                // 维度不存在或者大于0
+                if (c.dims <= 0)
+                {
+                    messages.Add("模型组 " + group.name + " 频道 " + c.name + " 的维度必须大于0");
+                }
+                else if(c.dims == 1)
+                {
+                    // 默认为是1
+                }
+
+                // 如果类型是 1,必须有目标骨骼存在
+                if(c.type == 1 && (c.attach_to == null || c.attach_to.Length == 0))
+                {
+                    messages.Add("模型组 " + group.name + " 频道 " + c.name + " 类型type为1时，必须有目标骨骼 attach_to");
                 }
                 
                 validSource(group.name, c.name, c.source, messages);
