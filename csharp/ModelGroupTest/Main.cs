@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using ModelGroup.Config;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Bson;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
@@ -86,6 +87,17 @@ namespace ModelGroupTest
 
                 Console.WriteLine("Valid successed");
 
+                String[] fileName = { @"\enum.bson", @"\resource.bson", @"\channel.bson" };
+                Object[] objects = { enums ,resources,channels};
+                for (int i = 0; i < 3; i++)
+                {
+                    System.IO.FileStream fs = new System.IO.FileStream(strPath + fileName[i], System.IO.FileMode.Create);
+                    using (BsonWriter writer = new BsonWriter(fs))
+                    {
+                        JsonSerializer serializer = new JsonSerializer();
+                        serializer.Serialize(writer, objects[i]);
+                    }
+                }
                 //ModelGroupConfig.Instance.LoadConfig(strEnum, strRes, strChannel, strPath);
             }
             catch(Exception e)
