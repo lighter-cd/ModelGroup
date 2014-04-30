@@ -2,29 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ModelGroup.Config.JObject;
 
 namespace ModelGroupTest
 {
-    class Item
-    {
-        public int ID { get; set; }
-        public string name { get; set; }
-        public string alias { get; set; }
-    }
-    class Enum
-    {
-        public string name { get; set; }
-        public string alias { get; set; }
-        public List<Item> item { get; set; }
-    }
-    class Enums
-    {
-        public List<Enum> enums { get; set; } 
-    }
-
     class EnumsValider
     {
-        private bool validEnum(Enum _enum, IList<string> messages)
+        private bool validEnum(Enumeration _enum, IList<string> messages)
         {
             HashSet<string> nameSets = new HashSet<string>();
             HashSet<string> aliasSets = new HashSet<string>();
@@ -65,7 +49,7 @@ namespace ModelGroupTest
             messages = new List<string>();
             HashSet<string> nameSets = new HashSet<string>();
             HashSet<string> aliasSets = new HashSet<string>();
-            foreach(Enum _enum in enums.enums)
+            foreach (Enumeration _enum in enums.enums)
             {
                 if(nameSets.Contains(_enum.name))
                 {

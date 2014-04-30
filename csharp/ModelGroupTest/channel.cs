@@ -4,63 +4,13 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
+using ModelGroup.Config.JObject;
 
 namespace ModelGroupTest
 {
-    class Source
-    {
-        public string group { get; set; }
-        [JsonProperty("enum")]
-        public string _enum {get;set;}
-        public string filter { get; set; }
-        public int value { get; set; }
-    }
-    class channel
-    {
-        public string name { get; set; }
-        public string alias { get; set; }
-        public string target { get; set; }
-        public int dims { get; set; }
-        public int type { get; set; }
-        public string attach_to { get; set; }
-        public List<string> flags { get; set; }
-        public List<Source> source { get; set; }
-
-        public channel()
-        {
-            dims = 1;
-        }
-    }
-    class ColorTarget
-    {
-        public string channel { get; set; }
-        public string element { get; set; }
-    }
-    class ColorChannel
-    {
-        public string name { get; set; }
-        public string alias { get; set; }
-        public List<ColorTarget> target { get; set; }
-    }
-    class ModelGroup
-    {
-        public string name { get; set; }
-        public string alias { get; set; }
-        public List<string> global_params { get; set; }
-        public List<channel> channels { get; set; }
-        public List<channel> textures { get; set; }
-        public List<ColorChannel> colors { get; set; }
-    }
-
-    class Channels
-    {
-        public List<string> flags { get; set; }
-        public List<ModelGroup> groups { get; set; }
-    }
-
     class ChannelValider
     {
-        private Dictionary<string, Enum> enumsDict;
+        private Dictionary<string, Enumeration> enumsDict;
         private HashSet<string> flagSets;
         private Dictionary<string, Group> resourceGroups;
 
@@ -90,7 +40,7 @@ namespace ModelGroupTest
             return false;
         }
 
-        private bool hasModelChannel(string target, ModelGroup group)
+        private bool hasModelChannel(string target, ChannelGroup group)
         {
             foreach(channel c in group.channels)
             {
@@ -113,7 +63,7 @@ namespace ModelGroupTest
             }
         }
 
-        private void validColorTarget(ModelGroup group, string c, IList<ColorTarget> targets, IList<string> messages)
+        private void validColorTarget(ChannelGroup group, string c, IList<ColorTarget> targets, IList<string> messages)
         {
             foreach (ColorTarget t in targets)
             {
@@ -164,7 +114,7 @@ namespace ModelGroupTest
                         messages.Add("模型组 " + group + " 频道 " + c + "source 的资源组" + src.group + "的过滤参数" + src.filter + "未定义");
                     }
 
-                    Enum _enum = enumsDict[src.filter];
+                    Enumeration _enum = enumsDict[src.filter];
                     bool bExist = false;
                     foreach(Item item in _enum.item)
                     {
@@ -182,7 +132,7 @@ namespace ModelGroupTest
             }
         }
 
-        private void validGroup(ModelGroup group, IList<string> messages)
+        private void validGroup(ChannelGroup group, IList<string> messages)
         {
             HashSet<string> nameSets = new HashSet<string>();
             HashSet<string> aliasSets = new HashSet<string>();
@@ -292,8 +242,8 @@ namespace ModelGroupTest
         {
             messages = new List<string>();
 
-            enumsDict = new Dictionary<string, Enum>();
-            foreach (Enum _enum in enums.enums)
+            enumsDict = new Dictionary<string, Enumeration>();
+            foreach (Enumeration _enum in enums.enums)
             {
                 enumsDict.Add(_enum.name,_enum);
             }
@@ -324,7 +274,7 @@ namespace ModelGroupTest
             
             HashSet<string> nameSets = new HashSet<string>();
             HashSet<string> aliasSets = new HashSet<string>();
-            foreach (ModelGroup group in channels.groups)
+            foreach (ChannelGroup group in channels.groups)
             {
                 if (nameSets.Contains(group.name))
                 {

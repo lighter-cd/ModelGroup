@@ -9,14 +9,18 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
-using LitJson;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Bson;
+using ModelGroup.Config.JObject;
 
 namespace ModelGroup.Config
 {
 	public class ModelFileConfig
 	{
 		private Dictionary<String,Enum.Enumeration> _dictEnumParams;	// 所有枚举列表的集合
-		private List<Resource.ResourceType> _listModelTypes;	// 所有资源的集合
+		private List<Resource.ResourceType> _listModelTypes;	        // 所有资源的集合
+        private Flags _componets;
 		private String _path;
 
 		private static ModelFileConfig instance = null;
@@ -76,143 +80,57 @@ namespace ModelGroup.Config
 			return null;
 		}
 
-		private bool loadEnums(String _enum)
+		private bool loadEnums(byte[] _enum)
 		{
-			JsonData jd = JsonMapper.ToObject (_enum);
-			if (jd.IsArray)
-			{
-				foreach(JsonData item in jd) 
-				{
-					if(item.Keys.Contains("name") && item.Keys.Contains("alias"))
-                    {
-						Enum.Enumeration ep = new Enum.Enumeration((String)item["name"],(String)item["alias"]);
-                        if (item.Keys.Contains("item"))
-                        {
-                            JsonData subItems = item["item"];
-                            if (subItems.IsArray)
-                            {
-                                foreach (JsonData subItem in subItems)
-                                {
-                                    if (subItem.Keys.Contains("ID") && subItem.Keys.Contains("name") && subItem.Keys.Contains("alias"))
-                                    {
-                                        ep.addItem((uint)(int)subItem["ID"], (String)subItem["name"], (String)subItem["alias"]);
-                                    }
-                                    else
-                                    {
-                                        //报错
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                if (subItems.Keys.Contains("ID") && subItems.Keys.Contains("name") && subItems.Keys.Contains("alias"))
-                                {
-                                    ep.addItem((uint)subItems["ID"], (String)subItems["name"], (String)subItems["alias"]);
-                                }
-                                else
-                                {
-                                    //报错
-                                }
-                            }
-                            _dictEnumParams[(String)item["name"]] = ep;
-                        }
-                        else
-                        {
-                            // 报错
-                        }
-                    }
-                    else
-                    {
-                        // 报错
-                    }
-				}
-			}
-			
-			return true;
-		}
-        private bool loadRes(String res)
-        {
- 			JsonData jd = JsonMapper.ToObject (res);
-			if (jd.IsArray)
-			{
-                foreach (JsonData itemModelType in jd)
+            MemoryStream ms = new MemoryStream(_enum);
+            using (BsonReader reader = new BsonReader(ms))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                Enums enums = serializer.Deserialize<Enums>(reader);
+
+                foreach(Enumeration e in enums.enums)
                 {
-                    if (itemModelType.Keys.Contains("name") && itemModelType.Keys.Contains("alias"))
+                    Enum.Enumeration _ee = new Enum.Enumeration(e.name, e.alias);
+                    foreach(Item i in e.item)
                     {
-                        Resource.ResourceType mt = new Resource.ResourceType((String)itemModelType["name"], (String)itemModelType["alias"]);
-                        if (itemModelType.Keys.Contains("type"))
-                        {
-                            JsonData arrayResource = itemModelType["type"];
-                            if (arrayResource.IsArray)
-                            {
-                                foreach (JsonData resource in arrayResource)
-                                {
-                                    newResource(mt, resource);
-                                }
-                            }
-                            else 
-                            {
-                                newResource(mt, arrayResource);
-                            }
-                            _listModelTypes.Add(mt);
-                        }
-                        else
-                        {
-                            // 报错
-                        }
+                        _ee.items.Add(new Enum.Item((uint)i.ID, i.name, i.alias));
                     }
-                    else
-                    {
-                        //报错
-                    }
+                    _dictEnumParams[e.name] = _ee;
                 }
             }
- 
             return true;
+		}
+        private bool loadRes(byte[] res)
+        {
+           MemoryStream ms = new MemoryStream(res);
+           using (BsonReader reader = new BsonReader(ms))
+           {
+               JsonSerializer serializer = new JsonSerializer();
+               JObject.Resource r = serializer.Deserialize<JObject.Resource>(reader);
+
+               _componets = new Flags(r.components);
+               Resource.Resource._componetsDef = _componets;
+
+               foreach(Group g in r.resources)
+               {
+                   Resource.ResourceType _r = new Resource.ResourceType(g.name,g.alias);
+                   foreach(ResourceType rt in g.type)
+                   {
+                       _r.addResource(new Resource.Resource(rt.name, rt.alias, _componets.GetBits(rt.components), rt.file));
+                   }
+                   _listModelTypes.Add(_r);
+               }
+           }
+           return true;
         }
 
-        public bool loadConfig(String _enum,String _res)
+        public bool loadConfig(byte[] _enum, byte[] _res)
         {
             if (loadEnums(_enum))
             {
                 return loadRes(_res);
             }
             return false;
-        }
-
-        private void newResource(Resource.ResourceType mt,JsonData resource)
-        {
-            Resource.FormatFile.FileType type = (resource.Keys.Contains("type")) ?
-                  (Resource.FormatFile.FileType)(int)resource["type"] : Resource.FormatFile.FileType.FT_MODEL;
-
-            Resource.Componets componets = 0;
-            if (resource.Keys.Contains("bone") && (int)resource["bone"]==1)
-            {
-                componets |= Resource.Componets.Skeleton;
-            }
-            if (resource.Keys.Contains("mesh") && (int)resource["mesh"]==1)
-            {
-                componets |= Resource.Componets.Mesh;
-            }
-            if (resource.Keys.Contains("anim") && (int)resource["anim"]==1)
-            {
-                componets |= Resource.Componets.Animate;
-            }
-            if (resource.Keys.Contains("ashook") && (int)resource["ashook"]==1)
-            {
-                componets |= Resource.Componets.Hook;
-            }
-            if (resource.Keys.Contains("camera") && (int)resource["camera"] == 1)
-            {
-                componets |= Resource.Componets.Camera;
-            }
-            if (resource.Keys.Contains("light") && (int)resource["light"]==1)
-            {
-                componets |= Resource.Componets.Light;
-            }
-
-            mt.addResource(new Resource.Resource((String)resource["name"],
-                (String)resource["alias"], (uint)componets, (String)resource["file"], type));
         }
 	}
 }

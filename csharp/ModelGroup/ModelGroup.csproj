@@ -36,16 +36,18 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Config\Channel\ChannelSource.cs" />
     <Compile Include="Config\Channel\ColorChannel.cs" />
-    <Compile Include="Config\Channel\Flags.cs" />
     <Compile Include="Config\Channel\ModelChannel.cs" />
     <Compile Include="Config\Channel\ModelGroupType.cs" />
+    <Compile Include="Config\JObject\Channel.cs" />
+    <Compile Include="Config\JObject\Enums.cs" />
+    <Compile Include="Config\JObject\Resource.cs" />
     <Compile Include="Config\ModelFileConfig.cs" />
     <Compile Include="Config\ModelGroupConfig.cs" />
     <Compile Include="Config\NamedItem.cs" />
     <Compile Include="Config\PartType.cs" />
     <Compile Include="Config\Enum\Item.cs" />
     <Compile Include="Config\Enum\Enumeration.cs" />
-    <Compile Include="Config\Resource\Componets.cs" />
+    <Compile Include="Config\Flags.cs" />
     <Compile Include="Config\Resource\FormatFile.cs" />
     <Compile Include="Config\Resource\ResourceType.cs" />
     <Compile Include="Config\Resource\Resource.cs" />
@@ -53,9 +55,9 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\LitJson\LitJson.csproj">
-      <Project>{256B1F9F-3729-4B4B-8D23-14FF12F57F4E}</Project>
-      <Name>LitJson</Name>
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.Net40.csproj">
+      <Project>{a9ae40ff-1a21-414a-9fe7-3be13644cc6d}</Project>
+      <Name>Newtonsoft.Json.Net40</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

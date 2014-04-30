@@ -14,15 +14,15 @@ namespace ModelGroup.Config
 	{
 		public class Resource : NamedItem
 		{
-			private uint _componets;
-			private FormatFile _file;
+            static public Flags _componetsDef;
+            private uint _componets;
+ 			private FormatFile _file;
 
-			public Resource (String name, String alias, uint componets, String file, 
-			                 FormatFile.FileType type)
+            public Resource(String name, String alias, uint componets, String file)
 				:base(name,alias)
 			{
 				_componets = componets;
-				_file = new FormatFile (file, type);
+				_file = new FormatFile (file);
 			}
 
 			public uint components
@@ -33,6 +33,10 @@ namespace ModelGroup.Config
 			{
 				get {return _file;}
 			}
+            public bool HasComponet(string c)
+            {
+                return _componetsDef.HasFlag(c, _componets);
+            }
 		}
 	}
 }

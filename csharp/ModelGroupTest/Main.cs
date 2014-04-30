@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Bson;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
+using ModelGroup.Config.JObject;
 
 namespace ModelGroupTest
 {
@@ -97,8 +98,18 @@ namespace ModelGroupTest
                         JsonSerializer serializer = new JsonSerializer();
                         serializer.Serialize(writer, objects[i]);
                     }
+                    fs.Close();
                 }
-                //ModelGroupConfig.Instance.LoadConfig(strEnum, strRes, strChannel, strPath);
+
+                byte[][] bsons = { null,null,null};
+                for (int i = 0; i < 3; i++)
+                {
+                    System.IO.FileStream read_fs = new System.IO.FileStream(strPath + fileName[i], System.IO.FileMode.Open);
+                    bsons[i] = new byte[read_fs.Length];
+                    read_fs.Read(bsons[i], 0, (int)read_fs.Length);
+                    read_fs.Close();
+                }
+                ModelGroupConfig.Instance.LoadConfig(bsons[0], bsons[1], bsons[2], strPath);
             }
             catch(Exception e)
             {

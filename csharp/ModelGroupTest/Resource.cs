@@ -2,30 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ModelGroup.Config.JObject;
 
 namespace ModelGroupTest
 {
-    class ResourceType
-    {
-        public string name { get; set; }
-        public string alias { get; set; }
-        public string file { get; set; }
-        public List<string> components { get; set; }
-    }
-
-    class Group
-    {
-        public string name { get; set; }
-        public string alias { get; set; }
-        public List<ResourceType> type { get; set; }
-    }
-    
-    class Resource
-    {
-        public List<string> components { get; set; }
-        public List<Group> resources { get; set; }
-    }
-
     class ResourceValider
     {
         private HashSet<string> enumSets;
@@ -99,7 +79,7 @@ namespace ModelGroupTest
             messages = new List<string>();
 
             enumSets = new HashSet<string>();
-            foreach(Enum _enum in enums.enums)
+            foreach (Enumeration _enum in enums.enums)
             {
                 enumSets.Add(_enum.name);
             }

@@ -30,20 +30,12 @@ namespace ModelGroup.Config
 
 		public class FormatFile
 		{
-			public enum FileType
-			{
-				FT_MODEL,
-				FT_TEXTURE
-			}
-
 			private String _file;			// 文件字符串
 			private List<Param> _vecParams;	// 频道使用的参数
-			private FileType _type;			// 是模型还是纹理
 
-			public FormatFile (String file, FileType type)
+			public FormatFile (String file)
 			{
 				_file = file;
-				_type = type;
 				_vecParams = new List<Param> ();
 			}
 
@@ -103,9 +95,6 @@ namespace ModelGroup.Config
 			}
 			public String file {
 				get {return _file;}
-			}
-			public FileType type {
-				get {return _type;}
 			}
 		}
 	}
